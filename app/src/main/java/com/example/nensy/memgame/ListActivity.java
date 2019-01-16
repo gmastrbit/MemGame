@@ -1,8 +1,10 @@
 package com.example.nensy.memgame;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class ListActivity extends AppCompatActivity {
@@ -20,5 +22,10 @@ public class ListActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
+    public void goFirstGame(View view){
+        Intent questionIntent = new Intent(ListActivity.this, moz1_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+    }
 
 }
