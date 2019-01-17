@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".RulesActivity" />
         <activity android:name=".ListActivity" />
-        <activity android:name=".moz1_1"></activity>
+        <activity android:name=".moz1_1" />
+        <activity android:name=".moz2_1"></activity>
     </application>
 
 </manifest>
