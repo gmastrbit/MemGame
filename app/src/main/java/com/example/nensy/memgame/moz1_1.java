@@ -42,8 +42,14 @@ public class moz1_1 extends AppCompatActivity {
 
     // 1 завдання
 
-    public void error1(View view) {
+    // помилки
+
+    public void error1_1_1(View view) {
         attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button7);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
 
         if (attempts1 == 3){
             Handler handler = new Handler();
@@ -61,6 +67,128 @@ public class moz1_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
+    public void error1_1_2(View view) {
+        attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button8);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts1 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_1_3(View view) {
+        attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button9);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts1 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_1_4(View view) {
+        attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button10);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts1 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_1_5(View view) {
+        attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button13);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts1 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_1_6(View view) {
+        attempts1++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button14);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts1 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    // успіх
 
     public void success1_1_1(View view){
         // зміна кольору кнопки
@@ -142,25 +270,153 @@ public class moz1_1 extends AppCompatActivity {
 
     // 2 завдання
 
-    public void error2(View view) {
+    // помилки
+
+    public void error1_2_1(View view) {
         attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button17);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
 
         if (attempts2 == 3){
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_5);
+                    setContentView(R.layout.moz1_3);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.moz1_6);
+                            setContentView(R.layout.moz1_4);
                         }
                     }, 1000);
                 }
             }, 500);
         }
     }
+
+    public void error1_2_2(View view) {
+        attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button19);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts2 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_2_3(View view) {
+        attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button20);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts2 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_2_4(View view) {
+        attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button21);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts2 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_2_5(View view) {
+        attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button23);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts2 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_2_6(View view) {
+        attempts2++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button24);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts2 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    // успіх
 
     public void success1_2_1(View view){
         // зміна кольору кнопки
@@ -242,6 +498,152 @@ public class moz1_1 extends AppCompatActivity {
 
     // 3 завдання
 
+    // помилки
+
+    public void error1_3_1(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button25);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_3_2(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button26);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_3_3(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button27);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_3_4(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button28);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_3_5(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button29);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void error1_3_6(View view) {
+        attempts3++;
+
+        Button button1;
+        button1 = (Button)findViewById(R.id.button33);
+        button1.setBackgroundColor(Color.parseColor("#bf1818"));
+
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.moz1_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.moz1_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
     public void checkResult(){
         if (success > -1 && success < 4){
             ImageView imageView = (ImageView) findViewById(R.id.imageView9);
@@ -252,20 +654,6 @@ public class moz1_1 extends AppCompatActivity {
         } else if (success == 9) {
             ImageView imageView = (ImageView) findViewById(R.id.imageView9);
             imageView.setImageResource(R.drawable.rate3);
-        }
-    }
-
-    public void error3(View view) {
-        attempts3++;
-
-        if (attempts3 == 3){
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    setContentView(R.layout.moz1_s);
-                    checkResult();
-                }
-            }, 500);
         }
     }
 
@@ -332,6 +720,11 @@ public class moz1_1 extends AppCompatActivity {
     // службові кнопки
 
     public void goHome1_1(View view) {
+        success = 0;
+        attempts1 = 0;
+        attempts2 = 0;
+        attempts3 = 0;
+
         Intent questionIntent = new Intent(moz1_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
