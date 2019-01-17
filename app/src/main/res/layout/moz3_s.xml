@@ -13,11 +13,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome2_1"
+            android:onClick="goHome3_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -40,17 +40,17 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageZirka1"
+            android:id="@+id/imageZirka2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/rate1" />
 
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/button90"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:onClick="go_moz3_1"
+            android:onClick="go_list_moz3_1"
             android:text="Далі" />
     </LinearLayout>
 </RelativeLayout>
