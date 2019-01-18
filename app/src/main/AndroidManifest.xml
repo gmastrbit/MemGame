@@ -20,7 +20,10 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".moz1_1" />
         <activity android:name=".moz2_1" />
-        <activity android:name=".moz3_1"></activity>
+        <activity android:name=".moz3_1" />
+        <activity android:name=".vih1_1" />
+        <activity android:name=".vih2_1" />
+        <activity android:name=".vih3_1"></activity>
     </application>
 
 </manifest>

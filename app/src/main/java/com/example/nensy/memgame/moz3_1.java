@@ -22,6 +22,7 @@ public class moz3_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.moz3_1);
+
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // приховує ActionBar:
@@ -680,6 +681,7 @@ public class moz3_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void goHome3_1(View view) {
         success = 0;
         attempts1 = 0;

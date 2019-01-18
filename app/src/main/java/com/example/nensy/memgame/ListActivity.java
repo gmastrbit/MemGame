@@ -22,8 +22,14 @@ public class ListActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-    public void goFirstGame(View view){
+    public void go_volume_1(View view){
         Intent questionIntent = new Intent(ListActivity.this, moz1_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+    }
+
+    public void go_volume_2(View view){
+        Intent questionIntent = new Intent(ListActivity.this, vih1_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }

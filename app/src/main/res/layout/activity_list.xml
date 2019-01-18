@@ -47,7 +47,7 @@
                     android:layout_width="100dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
-                    android:onClick="goFirstGame"
+                    android:onClick="go_volume_1"
                     android:text="Мозаїка пам'яті"
                     android:textAllCaps="false"
                     android:textSize="16sp" />
@@ -57,6 +57,7 @@
                     android:layout_width="100dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:onClick="go_volume_2"
                     android:text="Вихор іконок"
                     android:textAllCaps="false"
                     android:textSize="16sp" />
