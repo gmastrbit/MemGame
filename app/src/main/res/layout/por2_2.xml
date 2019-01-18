@@ -5,21 +5,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_por">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imageView38"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/home" />
-    </LinearLayout>
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,7 +23,26 @@
                 android:padding="5dp" />
 
             <ImageView
-                android:id="@+id/por3"
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/po1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/green" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/po2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp"
@@ -50,6 +54,11 @@
                 android:layout_height="120dp"
                 android:padding="5dp" />
 
+            <ImageView
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
         </TableRow>
 
         <TableRow
@@ -70,40 +79,29 @@
                 android:padding="5dp" />
 
             <ImageView
-                android:id="@+id/por4"
+                android:id="@+id/po3"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/por5"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/green" />
-
-            <ImageView
-                app:srcCompat="@drawable/transparent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp" />
-
-            <ImageView
-                app:srcCompat="@drawable/transparent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp" />
-
         </TableRow>
 
     </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

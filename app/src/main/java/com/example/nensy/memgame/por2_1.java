@@ -6,13 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-public class por1_1 extends AppCompatActivity {
+public class por2_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.por1_1);
-
+        setContentView(R.layout.por2_1);
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // приховує ActionBar:
@@ -23,7 +22,7 @@ public class por1_1 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                setContentView(R.layout.por1_2);
+                setContentView(R.layout.por2_2);
             }
         }, 1000);
     }
