@@ -80,18 +80,18 @@ public class vih1_1 extends AppCompatActivity {
     }
 
     public void error3_1(View view) {
-        checkResult();
         setContentView(R.layout.vih1_s);
+        checkResult();
     }
 
     public void error3_2(View view) {
-        checkResult();
         setContentView(R.layout.vih1_s);
+        checkResult();
     }
 
     public void error3_3(View view) {
-        checkResult();
         setContentView(R.layout.vih1_s);
+        checkResult();
     }
 
     // службові кнопки

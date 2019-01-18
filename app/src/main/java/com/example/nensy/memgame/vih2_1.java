@@ -111,9 +111,9 @@ public class vih2_1 extends AppCompatActivity {
     // службові кнопки
 
     public void go_list_vih3_1(View view) {
-        //Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
-        //startActivityForResult(questionIntent, 1);
-        //overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void goHome_vih2_1(View view) {
