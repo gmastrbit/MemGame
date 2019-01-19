@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showRules(View view){
-        // перехід на головну з анімацією:
+        // перехід на екран з правилами з анімацією
         Intent questionIntent = new Intent(MainActivity.this, RulesActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showList(View view){
-        // перехід на головну з анімацією:
+        // перехід на список ігор з анімацією:
         Intent questionIntent = new Intent(MainActivity.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);

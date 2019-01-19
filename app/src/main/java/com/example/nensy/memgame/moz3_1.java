@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class moz3_1 extends AppCompatActivity {
-    private int success = 0;
 
+    private int success = 0;
     private int attempts1 = 0;
     private int attempts2 = 0;
     private int attempts3 = 0;
@@ -185,6 +185,7 @@ public class moz3_1 extends AppCompatActivity {
             }, 500);
         }
     }
+    
     // успіх
 
     public void success3_1_1(View view){

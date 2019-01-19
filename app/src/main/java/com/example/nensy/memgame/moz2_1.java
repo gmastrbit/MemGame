@@ -10,11 +10,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class moz2_1 extends AppCompatActivity {
-    private int success = 0;
 
+    private int success = 0;
     private int attempts1 = 0;
     private int attempts2 = 0;
     private int attempts3 = 0;
@@ -66,6 +65,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_1_2(View view) {
         attempts1++;
 
@@ -89,6 +89,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_1_3(View view) {
         attempts1++;
 
@@ -112,6 +113,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_1_4(View view) {
         attempts1++;
 
@@ -135,6 +137,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_1_5(View view) {
         attempts1++;
 
@@ -158,6 +161,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_1_6(View view) {
         attempts1++;
 
@@ -361,6 +365,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_2_5(View view) {
         attempts2++;
 
@@ -564,6 +569,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_3_5(View view) {
         attempts3++;
 
@@ -581,6 +587,7 @@ public class moz2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
     public void error2_3_6(View view) {
         attempts3++;
 

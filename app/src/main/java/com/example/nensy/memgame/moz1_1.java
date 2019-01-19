@@ -14,7 +14,6 @@ import android.widget.ImageView;
 public class moz1_1 extends AppCompatActivity {
 
     private int success = 0;
-
     private int attempts1 = 0;
     private int attempts2 = 0;
     private int attempts3 = 0;
@@ -608,6 +607,7 @@ public class moz1_1 extends AppCompatActivity {
     }
 
     // результат
+
     public void checkResult(){
         if (success > -1 && success < 4){
             ImageView imageView = (ImageView) findViewById(R.id.imageView9);
