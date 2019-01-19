@@ -17,46 +17,23 @@
             android:gravity="center">
 
             <ImageView
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
+
+            <ImageView
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
+
+            <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp"
                 app:srcCompat="@drawable/three" />
 
-            <ImageView
-                app:srcCompat="@drawable/transparent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp" />
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/six" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <ImageView
-                app:srcCompat="@drawable/transparent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp" />
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/ten" />
-
-            <ImageView
-                app:srcCompat="@drawable/transparent"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp" />
         </TableRow>
 
         <TableRow
@@ -77,6 +54,31 @@
                 android:padding="5dp" />
 
             <ImageView
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                app:srcCompat="@drawable/transparent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/four" />
+
+            <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp"
@@ -93,11 +95,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView46"
+            android:id="@+id/imageView51"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_por_2_1"
+            android:onClick="goHome_por_3_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 

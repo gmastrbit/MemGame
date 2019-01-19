@@ -20,6 +20,7 @@
                 android:id="@+id/po4"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por2_2_2"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
 
@@ -52,6 +53,7 @@
                 android:id="@+id/po5"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por2_2_3"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
 
@@ -71,6 +73,7 @@
                 android:id="@+id/po6"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por2_2_4"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
 
@@ -84,6 +87,7 @@
                 android:id="@+id/po7"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por2_2_1"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
         </TableRow>
@@ -102,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_por_2_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 

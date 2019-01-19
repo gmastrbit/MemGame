@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-public class por1_1 extends AppCompatActivity {
+public class por3_1 extends AppCompatActivity {
 
     private int success = 0;
     private int success1 = 0;
@@ -19,7 +19,7 @@ public class por1_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.por1_1);
+        setContentView(R.layout.por3_1);
 
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -31,7 +31,7 @@ public class por1_1 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                setContentView(R.layout.por1_2);
+                setContentView(R.layout.por3_2);
             }
         }, 1000);
     }
@@ -39,38 +39,36 @@ public class por1_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
-        success = success1 + success2 + success3;
+        success = success1 + success2 + success3 - 10;
 
-        if (success > -1 && success < 4){
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
+        if (success > -10 && success < 4){
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
             imageView.setImageResource(R.drawable.rate1);
         } else if (success > 3 && success < 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
             imageView.setImageResource(R.drawable.rate2);
         } else if (success == 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
             imageView.setImageResource(R.drawable.rate3);
         }
     }
 
-    // успіх і невдача для 1 завдання гри
-
-    public void por1_1_1(View view) {
+    public void por3_1_1(View view) {
         if (success1 == 0) {
             success1++;
 
-            ImageView imageView1 = (ImageView) findViewById(R.id.por2);
-            imageView1.setImageResource(R.drawable.five);
+            ImageView imageView1 = (ImageView) findViewById(R.id.p1);
+            imageView1.setImageResource(R.drawable.two);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_3);
+                    setContentView(R.layout.por3_3);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_4);
+                            setContentView(R.layout.por3_4);
                         }
                     }, 1000);
                 }
@@ -78,22 +76,45 @@ public class por1_1 extends AppCompatActivity {
         }
     }
 
-    public void por1_1_2(View view) {
+    public void por3_1_2(View view) {
         if (success1 == 1) {
             success1++;
 
-            ImageView imageView2 = (ImageView) findViewById(R.id.por1);
-            imageView2.setImageResource(R.drawable.seven);
-
+            ImageView imageView2 = (ImageView) findViewById(R.id.p2);
+            imageView2.setImageResource(R.drawable.five);
+        } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_3);
+                    setContentView(R.layout.por3_3);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_4);
+                            setContentView(R.layout.por3_4);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void por3_1_3(View view) {
+        if (success1 == 2) {
+            success1++;
+
+            ImageView imageView3 = (ImageView) findViewById(R.id.p3);
+            imageView3.setImageResource(R.drawable.nine);
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.por3_3);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.por3_4);
                         }
                     }, 1000);
                 }
@@ -102,12 +123,12 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_3);
+                    setContentView(R.layout.por2_3);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_4);
+                            setContentView(R.layout.por2_4);
                         }
                     }, 1000);
                 }
@@ -117,22 +138,22 @@ public class por1_1 extends AppCompatActivity {
 
     // успіх і невдача для 2 завдання гри
 
-    public void por1_2_1(View view) {
+    public void por3_2_1(View view) {
         if (success2 == 0) {
             success2++;
 
-            ImageView imageView3 = (ImageView) findViewById(R.id.por4);
-            imageView3.setImageResource(R.drawable.four);
+            ImageView imageView4 = (ImageView) findViewById(R.id.p4);
+            imageView4.setImageResource(R.drawable.one);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_5);
+                    setContentView(R.layout.por3_5);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_6);
+                            setContentView(R.layout.por3_6);
                         }
                     }, 1000);
                 }
@@ -140,22 +161,23 @@ public class por1_1 extends AppCompatActivity {
         }
     }
 
-    public void por1_2_2(View view) {
+
+    public void por3_2_2(View view) {
         if (success2 == 1) {
             success2++;
 
-            ImageView imageView4 = (ImageView) findViewById(R.id.por5);
-            imageView4.setImageResource(R.drawable.six);
+            ImageView imageView5 = (ImageView) findViewById(R.id.p5);
+            imageView5.setImageResource(R.drawable.three);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_5);
+                    setContentView(R.layout.por3_5);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_6);
+                            setContentView(R.layout.por3_6);
                         }
                     }, 1000);
                 }
@@ -163,22 +185,45 @@ public class por1_1 extends AppCompatActivity {
         }
     }
 
-    public void por1_2_3(View view) {
+    public void por3_2_3(View view) {
         if (success2 == 2) {
             success2++;
 
-            ImageView imageView5 = (ImageView) findViewById(R.id.por3);
-            imageView5.setImageResource(R.drawable.nine);
-
+            ImageView imageView6 = (ImageView) findViewById(R.id.p6);
+            imageView6.setImageResource(R.drawable.four);
+        } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_5);
+                    setContentView(R.layout.por3_5);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_6);
+                            setContentView(R.layout.por3_6);
+                        }
+                    }, 1000);
+                }
+            }, 500);
+        }
+    }
+
+    public void por3_2_4(View view) {
+        if (success2 == 3) {
+            success2++;
+
+            ImageView imageView7 = (ImageView) findViewById(R.id.p7);
+            imageView7.setImageResource(R.drawable.eight);
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.por3_5);
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setContentView(R.layout.por3_6);
                         }
                     }, 1000);
                 }
@@ -187,12 +232,12 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_5);
+                    setContentView(R.layout.por2_5);
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.por1_6);
+                            setContentView(R.layout.por2_6);
                         }
                     }, 1000);
                 }
@@ -202,88 +247,102 @@ public class por1_1 extends AppCompatActivity {
 
     // успіх і невдача для 3 завдання гри
 
-    public void por1_3_1(View view) {
+    public void por3_3_1(View view) {
         if (success3 == 0) {
             success3++;
 
-            ImageView imageView6 = (ImageView) findViewById(R.id.por6);
-            imageView6.setImageResource(R.drawable.one);
+            ImageView imageView8 = (ImageView) findViewById(R.id.p8);
+            imageView8.setImageResource(R.drawable.one);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+                    setContentView(R.layout.por3_s);
                 }
             }, 500);
         }
     }
 
-    public void por1_3_2(View view) {
+    public void por3_3_2(View view) {
         if (success3 == 1) {
             success3++;
 
-            ImageView imageView7 = (ImageView) findViewById(R.id.por8);
-            imageView7.setImageResource(R.drawable.two);
+            ImageView imageView9 = (ImageView) findViewById(R.id.p9);
+            imageView9.setImageResource(R.drawable.six);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+                    setContentView(R.layout.por3_s);
                 }
             }, 500);
         }
     }
 
-    public void por1_3_3(View view) {
+    public void por3_3_3(View view) {
         if (success3 == 2) {
             success3++;
 
-            ImageView imageView8 = (ImageView) findViewById(R.id.por9);
-            imageView8.setImageResource(R.drawable.three);
+            ImageView imageView10 = (ImageView) findViewById(R.id.p10);
+            imageView10.setImageResource(R.drawable.seven);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+                    setContentView(R.layout.por3_s);
                 }
             }, 500);
         }
     }
 
-    public void por1_3_4(View view) {
+    public void por3_3_4(View view) {
         if (success3 == 3) {
             success3++;
 
-            ImageView imageView9 = (ImageView) findViewById(R.id.por7);
-            imageView9.setImageResource(R.drawable.eight);
+            ImageView imageView11 = (ImageView) findViewById(R.id.p11);
+            imageView11.setImageResource(R.drawable.eight);
+        } else {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.por3_s);
+                }
+            }, 500);
+        }
+    }
 
-            setContentView(R.layout.por1_s);
+    public void por3_3_5(View view) {
+        if (success3 == 4) {
+            success3++;
+
+            ImageView imageView12 = (ImageView) findViewById(R.id.p12);
+            imageView12.setImageResource(R.drawable.ten);
+
+            setContentView(R.layout.por3_s);
             checkResult();
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+                    setContentView(R.layout.por3_s);
                 }
             }, 500);
         }
     }
 
-    // службові кнопки
-
-    public void goHome_por_1_1(View view) {
+    public void goHome_por_3_1(View view) {
         success = 0;
         success1 = 0;
         success2 = 0;
         success3 = 0;
 
-        Intent questionIntent = new Intent(por1_1.this, MainActivity.class);
+        Intent questionIntent = new Intent(por3_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
-    public void go_por2_1(View view) {
-        Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+    public void go_list_por3_1(View view) {
+        Intent questionIntent = new Intent(por3_1.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }

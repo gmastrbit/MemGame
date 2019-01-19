@@ -25,7 +25,8 @@
         <activity android:name=".vih2_1" />
         <activity android:name=".vih3_1" />
         <activity android:name=".por1_1" />
-        <activity android:name=".por2_1"></activity>
+        <activity android:name=".por2_1" />
+        <activity android:name=".por3_1"></activity>
     </application>
 
 </manifest>

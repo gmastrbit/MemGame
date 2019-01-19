@@ -17,10 +17,12 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/p10"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por3_3_3"
                 android:padding="5dp"
-                app:srcCompat="@drawable/three" />
+                app:srcCompat="@drawable/green" />
 
             <ImageView
                 app:srcCompat="@drawable/transparent"
@@ -29,10 +31,12 @@
                 android:padding="5dp" />
 
             <ImageView
+                android:id="@+id/p9"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por3_3_2"
                 android:padding="5dp"
-                app:srcCompat="@drawable/six" />
+                app:srcCompat="@drawable/green" />
         </TableRow>
 
         <TableRow
@@ -47,16 +51,18 @@
                 android:padding="5dp" />
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/ten" />
-
-            <ImageView
                 app:srcCompat="@drawable/transparent"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/p12"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="por3_3_5"
+                android:padding="5dp"
+                app:srcCompat="@drawable/green" />
         </TableRow>
 
         <TableRow
@@ -65,10 +71,20 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/p11"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por3_3_4"
                 android:padding="5dp"
-                app:srcCompat="@drawable/eight" />
+                app:srcCompat="@drawable/green" />
+
+            <ImageView
+                android:id="@+id/p8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="por3_3_1"
+                android:padding="5dp"
+                app:srcCompat="@drawable/green" />
 
             <ImageView
                 app:srcCompat="@drawable/transparent"
@@ -76,11 +92,6 @@
                 android:layout_height="120dp"
                 android:padding="5dp" />
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/one" />
         </TableRow>
 
     </TableLayout>
@@ -93,11 +104,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView46"
+            android:id="@+id/imageView54"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_por_2_1"
+            android:onClick="goHome_por_3_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -112,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"
-            android:text="Запам'ятай порядок"
+            android:text="Відтвори"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="24sp"
