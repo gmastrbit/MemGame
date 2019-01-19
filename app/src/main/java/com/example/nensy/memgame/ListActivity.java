@@ -34,4 +34,10 @@ public class ListActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    public void go_volume_3(View view){
+        Intent questionIntent = new Intent(ListActivity.this, por1_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+    }
+
 }

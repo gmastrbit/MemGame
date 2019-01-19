@@ -67,6 +67,7 @@ public class vih1_1 extends AppCompatActivity {
     }
 
     // не правильно
+
     public void error1_1(View view) {
         setContentView(R.layout.vih1_3);
     }

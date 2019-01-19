@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_por_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -39,17 +40,16 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/vih11"
-            app:srcCompat="@drawable/rate1"
+            android:id="@+id/por10"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/rate1" />
 
         <Button
             android:id="@+id/button34"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:onClick="go_list_vih2_1"
             android:text="Далі" />
     </LinearLayout>
 </RelativeLayout>

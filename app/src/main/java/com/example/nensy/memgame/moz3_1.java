@@ -185,7 +185,7 @@ public class moz3_1 extends AppCompatActivity {
             }, 500);
         }
     }
-    
+
     // успіх
 
     public void success3_1_1(View view){
@@ -682,6 +682,8 @@ public class moz3_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
+    // службові кнопки
 
     public void goHome3_1(View view) {
         success = 0;

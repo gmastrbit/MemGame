@@ -32,6 +32,7 @@
                 android:id="@+id/por1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por1_1_2"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
         </TableRow>
@@ -51,6 +52,7 @@
                 android:id="@+id/por2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="por1_1_1"
                 android:padding="5dp"
                 app:srcCompat="@drawable/green" />
 
@@ -99,6 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_por_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 

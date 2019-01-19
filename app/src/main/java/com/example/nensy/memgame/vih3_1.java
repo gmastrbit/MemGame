@@ -10,12 +10,14 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class vih3_1 extends AppCompatActivity {
+
     private int success = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vih3_1);
+
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // приховує ActionBar:
@@ -28,8 +30,9 @@ public class vih3_1 extends AppCompatActivity {
             public void run() {
                 setContentView(R.layout.vih3_2);
             }
-        }, 1200);
+        }, 1000);
     }
+
     // результат
 
     public void checkResult(){
@@ -44,6 +47,7 @@ public class vih3_1 extends AppCompatActivity {
             imageView.setImageResource(R.drawable.rate3);
         }
     }
+
     // правильно
 
     public void go_vih3_3(View view) {
@@ -61,6 +65,7 @@ public class vih3_1 extends AppCompatActivity {
         setContentView(R.layout.vih3_s);
         checkResult();
     }
+
     // не правильно
 
     public void error_vih_3_1_1(View view) {
@@ -115,6 +120,8 @@ public class vih3_1 extends AppCompatActivity {
         setContentView(R.layout.vih3_s);
         checkResult();
     }
+
+    // службові кнопки
 
     public void goHome_vih3_1(View view) {
         success = 0;

@@ -74,6 +74,7 @@
                     android:layout_width="100dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:onClick="go_volume_3"
                     android:text="Йди за ними"
                     android:textAllCaps="false"
                     android:textSize="16sp" />
