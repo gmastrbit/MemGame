@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.activity_main);
 
         // приховує статус бар:
@@ -27,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         Intent questionIntent = new Intent(MainActivity.this, RulesActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
-        //finish();
     }
 
     public void showList(View view){
@@ -35,6 +36,6 @@ public class MainActivity extends AppCompatActivity {
         Intent questionIntent = new Intent(MainActivity.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
-        //finish();
     }
+
 }

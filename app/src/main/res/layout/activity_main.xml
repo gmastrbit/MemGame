@@ -54,6 +54,7 @@
                 android:layout_marginRight="20dp"
                 android:width="100dp"
                 android:height="55dp"
+                android:background="@drawable/main_buttons"
                 android:onClick="showList"
                 android:text="Грати" />
 
@@ -66,6 +67,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="100dp"
                 android:height="55dp"
+                android:background="@drawable/main_buttons"
                 android:onClick="showRules"
                 android:text="Правила" />
 

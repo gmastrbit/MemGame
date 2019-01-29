@@ -11,11 +11,14 @@ import android.widget.ImageView;
 
 public class vih1_1 extends AppCompatActivity {
 
+    // змінна для підрахунку успішних спроб
     private int success = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.vih1_1);
 
         // приховує статус бар:
@@ -25,6 +28,7 @@ public class vih1_1 extends AppCompatActivity {
         // орієнтація екрана:
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        // після відкриття activity через секунду початковий layout буде змінений на наступний
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
@@ -33,7 +37,7 @@ public class vih1_1 extends AppCompatActivity {
         }, 1000);
     }
 
-    // результат
+    // метод для перевірки результату
 
     public void checkResult(){
         if (success > 0 && success < 2){
@@ -51,7 +55,9 @@ public class vih1_1 extends AppCompatActivity {
     // правильно
 
     public void go_vih1_3(View view) {
+        // при правильній відповіді, змінна успіху збільшується
         success++;
+        // відразу змінюється layout
         setContentView(R.layout.vih1_3);
     }
 
@@ -69,6 +75,7 @@ public class vih1_1 extends AppCompatActivity {
     // не правильно
 
     public void error1_1(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih1_3);
     }
 
@@ -82,27 +89,32 @@ public class vih1_1 extends AppCompatActivity {
 
     public void error3_1(View view) {
         setContentView(R.layout.vih1_s);
+        // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
     }
 
     public void error3_2(View view) {
         setContentView(R.layout.vih1_s);
+        // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
     }
 
     public void error3_3(View view) {
         setContentView(R.layout.vih1_s);
+        // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
     }
 
     // службові кнопки
 
+    // перехід до наступної гри
     public void go_list_vih2_1(View view) {
         Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    // перехід на головну activity
     public void goHome_vih1_1(View view) {
         success = 0;
 

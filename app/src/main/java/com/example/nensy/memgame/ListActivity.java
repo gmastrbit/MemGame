@@ -12,6 +12,8 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.activity_list);
 
         // приховує статус бар:
@@ -23,18 +25,21 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public void go_volume_1(View view){
+        // перехід на першу гру першого розділа з анімацією
         Intent questionIntent = new Intent(ListActivity.this, moz1_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void go_volume_2(View view){
+        // перехід на першу гру другого розділа з анімацією
         Intent questionIntent = new Intent(ListActivity.this, vih1_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void go_volume_3(View view){
+        // перехід на першу гру третього розділа з анімацією
         Intent questionIntent = new Intent(ListActivity.this, por1_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);

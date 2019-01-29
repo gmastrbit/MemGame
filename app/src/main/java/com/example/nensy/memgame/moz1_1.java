@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 public class moz1_1 extends AppCompatActivity {
 
+    // зміння для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
     private int attempts1 = 0;
     private int attempts2 = 0;
@@ -21,6 +22,8 @@ public class moz1_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.moz1_1);
 
         // приховує статус бар:
@@ -30,6 +33,7 @@ public class moz1_1 extends AppCompatActivity {
         // орієнтація екрана:
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        // після відкриття activity через секунду початковий layout буде змінений на наступний
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
@@ -43,18 +47,23 @@ public class moz1_1 extends AppCompatActivity {
     // помилки
 
     public void error1_1_1(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button7);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
 
+        // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts1 == 3){
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
+                    // показується layout із завданням
                     setContentView(R.layout.moz1_3);
 
+                    // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
@@ -683,6 +692,7 @@ public class moz1_1 extends AppCompatActivity {
 
     // службові кнопки
 
+    // перехід на головну activity
     public void goHome1_1(View view) {
         success = 0;
         attempts1 = 0;
@@ -694,6 +704,7 @@ public class moz1_1 extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    // перехід до наступної гри
     public void go_moz2_1(View view) {
         Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
         startActivityForResult(questionIntent, 1);

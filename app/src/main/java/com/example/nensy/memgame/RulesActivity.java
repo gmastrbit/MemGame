@@ -20,9 +20,4 @@ public class RulesActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-        finish();
-    }
 }

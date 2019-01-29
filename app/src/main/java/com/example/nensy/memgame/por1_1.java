@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 public class por1_1 extends AppCompatActivity {
 
+    // змінні для обрахунку успішних спроб і просто спроб
     private int success = 0;
     private int success1 = 0;
     private int success2 = 0;
@@ -19,6 +20,8 @@ public class por1_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // встановлення початкового layout
         setContentView(R.layout.por1_1);
 
         // приховує статус бар:
@@ -36,8 +39,7 @@ public class por1_1 extends AppCompatActivity {
         }, 1000);
     }
 
-    // результат
-
+    // метод для перевірки результату в залежності від успішних спроб для 1, 2 і 3 гри
     public void checkResult(){
         success = success1 + success2 + success3;
 
@@ -56,15 +58,23 @@ public class por1_1 extends AppCompatActivity {
     // успіх і невдача для 1 завдання гри
 
     public void por1_1_1(View view) {
+        // спочатку у змінної success1 значення 0
+        // відносно нього буде перевірятися порядок в першій грі
+        // якщо це значення нульове, отже, порядок вірний
+        // якщо це значення уже не нульове, отже, спочатку була вибрана відповідь, яка порушила правильний порядок
         if (success1 == 0) {
+            // збільшення змінної успіху для перевірки при наступному натисканні на іншу відповідь
             success1++;
 
+            // заміна зображення на картинці
             ImageView imageView1 = (ImageView) findViewById(R.id.por2);
             imageView1.setImageResource(R.drawable.five);
         } else {
+            // при невірному порядку через пів секунди відбувається перехід на наступне завдання
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
+                    // показується наступне завдання і через секунду відбувається перехід на наступний layout, де треба вибрати правильні відповіді
                     setContentView(R.layout.por1_3);
 
                     Handler handler = new Handler();
@@ -271,6 +281,7 @@ public class por1_1 extends AppCompatActivity {
 
     // службові кнопки
 
+    // перехід на головну activity
     public void goHome_por_1_1(View view) {
         success = 0;
         success1 = 0;
@@ -282,6 +293,7 @@ public class por1_1 extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    // перехід до наступної гри
     public void go_por2_1(View view) {
         Intent questionIntent = new Intent(por1_1.this, por2_1.class);
         startActivityForResult(questionIntent, 1);
