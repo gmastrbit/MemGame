@@ -91,7 +91,8 @@
                     android:layout_height="114dp"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/volume1"
+                    android:background="@drawable/volume4"
+                    android:onClick="go_volume_4"
                     android:text="Порядок кольорів"
                     android:textAllCaps="false"
                     android:textSize="16sp" />

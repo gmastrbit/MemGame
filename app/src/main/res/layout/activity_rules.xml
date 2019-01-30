@@ -7,160 +7,126 @@
     tools:context=".RulesActivity"
     android:background="@drawable/gradient">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp"
-                android:text="Правила гри"
+                android:paddingBottom="25dp"
+                android:text="Правила"
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="Мозаїка пам'яті"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="24sp" />
-
-            <ImageView
-                android:id="@+id/imageView56"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/moz1_2" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Потрібно запам'ятати клітинки, які виділені синім кольором"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imageView57"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/moz1_1" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Потім треба відтворити всі підсвічені клітинки на чистому полі"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="Вихор іконок"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="24sp" />
-
-            <ImageView
-                android:id="@+id/imageView58"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/vih1_1" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Запам'ятайте всі ікнонки, які є на екрані"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imageView59"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/vih1_2" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Тепер потрібно вибрати лише одну нову іконку"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="Йди за ним"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="24sp" />
-
-            <ImageView
-                android:id="@+id/imageView60"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/por1_1" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Запам'ятайте порядок цифр на екрані"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imageView61"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                app:srcCompat="@drawable/por1_2" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Натисніть на зелені кружечки по порядку, який запам'ятали"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="20sp" />
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume1"
+                    android:onClick="go_moz"
+                    android:text="Мозаїка пам'яті"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume2"
+                    android:onClick="go_vih"
+                    android:text="Вихор іконок"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume3"
+                    android:onClick="go_por"
+                    android:text="Йди за ними"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume1"
+                    android:text="Порядок кольорів"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume2"
+                    android:text="Почерговість цифр"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="100dp"
+                    android:layout_height="114dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/volume3"
+                    android:text="Впорядкуй слова"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

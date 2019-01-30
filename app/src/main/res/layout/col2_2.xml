@@ -17,22 +17,29 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/col1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
                 android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
+                app:srcCompat="@drawable/col1_2" />
 
             <ImageView
+                android:id="@+id/col2"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
                 android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
+                app:srcCompat="@drawable/col2_1" />
 
             <ImageView
+                android:id="@+id/col3"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
                 android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
+                app:srcCompat="@drawable/col1_3" />
+
         </TableRow>
 
         <TableRow
@@ -41,46 +48,59 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/col4"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
                 android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
+                app:srcCompat="@drawable/col2_2" />
 
             <ImageView
+                android:id="@+id/col5"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
+                android:padding="5dp"
+                app:srcCompat="@drawable/col3_3" />
+
+            <ImageView
+                android:id="@+id/col6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
+                android:padding="5dp"
+                app:srcCompat="@drawable/col2_3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/col7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
+                android:padding="5dp"
+                app:srcCompat="@drawable/col3_1" />
+
+            <ImageView
+                android:id="@+id/col8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="col4_1_1"
+                android:padding="5dp"
+                app:srcCompat="@drawable/col3_2" />
+
+            <ImageView
+                android:id="@+id/col9"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:onClick="ercol4_1_1"
                 android:padding="5dp"
                 app:srcCompat="@drawable/col1_1" />
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="5dp"
-                app:srcCompat="@drawable/transparent" />
         </TableRow>
 
     </TableLayout>
@@ -93,11 +113,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/imageView64"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_col_1_1"
+            android:onClick="goHome_col_2_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -112,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"
-            android:text="Запам'ятай колір"
+            android:text="Вибери правильний колір"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="24sp"

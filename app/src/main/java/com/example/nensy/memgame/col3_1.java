@@ -2,17 +2,14 @@ package com.example.nensy.memgame;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 
-public class col1_1 extends AppCompatActivity {
-
+public class col3_1 extends AppCompatActivity {
     // змінні для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
     private int attempts1 = 0;
@@ -24,7 +21,7 @@ public class col1_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // вибирається початковий layout
-        setContentView(R.layout.col1_1);
+        setContentView(R.layout.col3_1);
 
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -37,23 +34,22 @@ public class col1_1 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                setContentView(R.layout.col1_2);
+                setContentView(R.layout.col3_2);
             }
         }, 1000);
-
     }
 
     // перевірка результату
 
     public void checkResult(){
         if (success > 0 && success < 3){
-            ImageView imageView = (ImageView) findViewById(R.id.col1_star);
+            ImageView imageView = (ImageView) findViewById(R.id.col3_star);
             imageView.setImageResource(R.drawable.rate1);
         } else if (success > 2 && success < 5) {
-            ImageView imageView = (ImageView) findViewById(R.id.col1_star);
+            ImageView imageView = (ImageView) findViewById(R.id.col3_star);
             imageView.setImageResource(R.drawable.rate2);
         } else if (success > 4 && success < 7) {
-            ImageView imageView = (ImageView) findViewById(R.id.col1_star);
+            ImageView imageView = (ImageView) findViewById(R.id.col3_star);
             imageView.setImageResource(R.drawable.rate3);
         }
     }
@@ -62,14 +58,14 @@ public class col1_1 extends AppCompatActivity {
 
     // вірно
 
-    public void success4_1_1(View view) {
+    public void co4_1_1(View view) {
         // додаємо кількість загальних спроб
         success++;
         attempts1++;
 
         // вірна відповідь приховується, щоб полегшити гру
         // заміна зображення на картинці
-        ImageView imageView1 = (ImageView) findViewById(R.id.col9);
+        ImageView imageView1 = (ImageView) findViewById(R.id.col6);
         imageView1.setVisibility(View.INVISIBLE);
 
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
@@ -78,13 +74,13 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_3);
+                    setContentView(R.layout.col3_3);
 
                     // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.col1_4);
+                            setContentView(R.layout.col3_4);
                         }
                     }, 1000);
                 }
@@ -94,7 +90,7 @@ public class col1_1 extends AppCompatActivity {
 
     // помилка
 
-    public void error4_1_1(View view) {
+    public void erco4_1_1(View view) {
         // додаємо кількість загальних спроб
         attempts1++;
 
@@ -106,13 +102,13 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_3);
+                    setContentView(R.layout.col3_3);
 
                     // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.col1_4);
+                            setContentView(R.layout.col3_4);
                         }
                     }, 1000);
                 }
@@ -124,14 +120,14 @@ public class col1_1 extends AppCompatActivity {
 
     // вірно
 
-    public void success4_2_1(View view) {
+    public void co4_2_1(View view) {
         // додаємо кількість загальних спроб
         success++;
         attempts2++;
 
         // вірна відповідь приховується, щоб полегшити гру
         // заміна зображення на картинці
-        ImageView imageView1 = (ImageView) findViewById(R.id.co1);
+        ImageView imageView1 = (ImageView) findViewById(R.id.co3);
         imageView1.setVisibility(View.INVISIBLE);
 
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
@@ -140,13 +136,13 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_5);
+                    setContentView(R.layout.col3_5);
 
                     // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.col1_6);
+                            setContentView(R.layout.col3_6);
                         }
                     }, 1000);
                 }
@@ -154,14 +150,14 @@ public class col1_1 extends AppCompatActivity {
         }
     }
 
-    public void success4_2_2(View view) {
+    public void co4_2_2(View view) {
         // додаємо кількість загальних спроб
         success++;
         attempts2++;
 
         // вірна відповідь приховується, щоб полегшити гру
         // заміна зображення на картинці
-        ImageView imageView1 = (ImageView) findViewById(R.id.co9);
+        ImageView imageView1 = (ImageView) findViewById(R.id.co5);
         imageView1.setVisibility(View.INVISIBLE);
 
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
@@ -170,13 +166,13 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_5);
+                    setContentView(R.layout.col3_5);
 
                     // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.col1_6);
+                            setContentView(R.layout.col3_6);
                         }
                     }, 1000);
                 }
@@ -186,7 +182,7 @@ public class col1_1 extends AppCompatActivity {
 
     // помилка
 
-    public void error4_2_1(View view) {
+    public void erco4_2_1(View view) {
         // додаємо кількість загальних спроб
         attempts2++;
 
@@ -198,13 +194,13 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_5);
+                    setContentView(R.layout.col3_5);
 
                     // далі відразу через секунду показується layout, де треба вибрати правильний порядок
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
-                            setContentView(R.layout.col1_6);
+                            setContentView(R.layout.col3_6);
                         }
                     }, 1000);
                 }
@@ -216,53 +212,7 @@ public class col1_1 extends AppCompatActivity {
 
     // вірно
 
-    public void success4_3_1(View view) {
-        // додаємо кількість загальних спроб
-        success++;
-        attempts3++;
-
-        // вірна відповідь приховується, щоб полегшити гру
-        // заміна зображення на картинці
-        ImageView imageView1 = (ImageView) findViewById(R.id.c3);
-        imageView1.setVisibility(View.INVISIBLE);
-
-        // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
-        if (attempts3 == 3){
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    // показується layout із завданням
-                    setContentView(R.layout.col1_s);
-                    checkResult();
-                }
-            }, 500);
-        }
-    }
-
-    public void success4_3_2(View view) {
-        // додаємо кількість загальних спроб
-        success++;
-        attempts3++;
-
-        // вірна відповідь приховується, щоб полегшити гру
-        // заміна зображення на картинці
-        ImageView imageView1 = (ImageView) findViewById(R.id.c5);
-        imageView1.setVisibility(View.INVISIBLE);
-
-        // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
-        if (attempts3 == 3){
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    // показується layout із завданням
-                    setContentView(R.layout.col1_s);
-                    checkResult();
-                }
-            }, 500);
-        }
-    }
-
-    public void success4_3_3(View view) {
+    public void co4_3_1(View view) {
         // додаємо кількість загальних спроб
         success++;
         attempts3++;
@@ -278,7 +228,53 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_s);
+                    setContentView(R.layout.col3_s);
+                    checkResult();
+                }
+            }, 500);
+        }
+    }
+
+    public void co4_3_2(View view) {
+        // додаємо кількість загальних спроб
+        success++;
+        attempts3++;
+
+        // вірна відповідь приховується, щоб полегшити гру
+        // заміна зображення на картинці
+        ImageView imageView1 = (ImageView) findViewById(R.id.c3);
+        imageView1.setVisibility(View.INVISIBLE);
+
+        // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    // показується layout із завданням
+                    setContentView(R.layout.col3_s);
+                    checkResult();
+                }
+            }, 500);
+        }
+    }
+
+    public void co4_3_3(View view) {
+        // додаємо кількість загальних спроб
+        success++;
+        attempts3++;
+
+        // вірна відповідь приховується, щоб полегшити гру
+        // заміна зображення на картинці
+        ImageView imageView1 = (ImageView) findViewById(R.id.c4);
+        imageView1.setVisibility(View.INVISIBLE);
+
+        // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
+        if (attempts3 == 3){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    // показується layout із завданням
+                    setContentView(R.layout.col3_s);
                     checkResult();
                 }
             }, 500);
@@ -287,7 +283,7 @@ public class col1_1 extends AppCompatActivity {
 
     // помилка
 
-    public void error4_3_1(View view) {
+    public void erco4_3_1(View view) {
         // додаємо кількість загальних спроб
         attempts3++;
 
@@ -299,7 +295,7 @@ public class col1_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col1_s);
+                    setContentView(R.layout.col3_s);
                     checkResult();
                 }
             }, 500);
@@ -309,22 +305,19 @@ public class col1_1 extends AppCompatActivity {
     // службові кнопки
 
     // перехід на головну activity
-    public void goHome_col_1_1(View view) {
+    public void goHome_col_3_1(View view) {
         success = 0;
         attempts1 = 0;
         attempts2 = 0;
         attempts3 = 0;
 
-        Intent questionIntent = new Intent(col1_1.this, MainActivity.class);
+        Intent questionIntent = new Intent(col3_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
-
-    // перехід до наступної гри
-    public void go_col2_1(View view) {
-        Intent questionIntent = new Intent(col1_1.this, col2_1.class);
-       startActivityForResult(questionIntent, 1);
+    public void go_list_col3_1(View view) {
+        Intent questionIntent = new Intent(col3_1.this, ListActivity.class);
+        startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
-
 }

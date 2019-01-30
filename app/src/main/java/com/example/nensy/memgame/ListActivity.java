@@ -45,4 +45,12 @@ public class ListActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    public void go_volume_4(View view){
+        // перехід на першу гру четвертого розділа з анімацією
+        Intent questionIntent = new Intent(ListActivity.this, col1_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+    }
+
+
 }
