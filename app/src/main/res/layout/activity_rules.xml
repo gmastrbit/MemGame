@@ -94,7 +94,9 @@
                     android:background="@drawable/volume1"
                     android:text="Порядок кольорів"
                     android:textAllCaps="false"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="610dp" />
 
             </LinearLayout>
 

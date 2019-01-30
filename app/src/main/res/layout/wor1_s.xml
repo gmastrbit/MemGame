@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_vih">
+    android:background="@drawable/gradient_wor">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,11 +13,10 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView34"
+            android:id="@+id/imageView79"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_vih1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -40,10 +39,10 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/vih11"
+            android:id="@+id/col2_star"
+            app:srcCompat="@drawable/rate1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/rate1" />
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/button34"
@@ -51,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/main_buttons"
-            android:onClick="go_list_vih2_1"
+            android:onClick="go_col2_1"
             android:text="Далі" />
     </LinearLayout>
 </RelativeLayout>

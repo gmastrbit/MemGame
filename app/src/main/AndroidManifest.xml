@@ -36,7 +36,8 @@
         <activity android:name=".rulse_num" />
         <activity android:name=".rules_wor" />
         <activity android:name=".col2_1" />
-        <activity android:name=".col3_1"></activity>
+        <activity android:name=".col3_1" />
+        <activity android:name=".wor1_1"></activity>
     </application>
 
 </manifest>
