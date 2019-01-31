@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_wor">
+    android:background="@drawable/gradient_num">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wo4"
+                android:id="@+id/w4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -52,7 +52,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wo5"
+                android:id="@+id/w5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -68,7 +68,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wo6"
+                android:id="@+id/w6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -84,7 +84,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wo7"
+                android:id="@+id/w7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -104,11 +104,10 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView81"
+            android:id="@+id/imageView94"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_wor2_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -125,7 +124,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
-            android:onClick="check_wor_2_2"
+            android:onClick="check_wor_3_2"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>
