@@ -17,7 +17,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor1"
+                android:id="@+id/wo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -33,7 +33,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor2"
+                android:id="@+id/wo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -49,7 +49,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor3"
+                android:id="@+id/wo3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -69,11 +69,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView74"
+            android:id="@+id/imageView78"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_worl_1_1"
+            android:onClick="goHome_wor2_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -109,7 +109,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
-            android:onClick="check_wor_1_1"
+            android:onClick="check_wor_2_1"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

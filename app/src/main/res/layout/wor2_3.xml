@@ -16,14 +16,14 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <EditText
-                android:id="@+id/wor1"
+            <TextView
+                android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:padding="5dp"
+                android:text="автомобіль"
                 android:textAlignment="center"
+                android:textColor="#000"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -32,14 +32,14 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <EditText
-                android:id="@+id/wor2"
+            <TextView
+                android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:padding="5dp"
+                android:text="пісок"
                 android:textAlignment="center"
+                android:textColor="#000"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -48,14 +48,30 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <EditText
-                android:id="@+id/wor3"
+            <TextView
+                android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:padding="5dp"
+                android:text="море"
                 android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="32sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="скло"
+                android:textAlignment="center"
+                android:textColor="#000"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -69,11 +85,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView74"
+            android:id="@+id/imageView80"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_worl_1_1"
+            android:onClick="goHome_wor2_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -88,28 +104,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"
-            android:text="Запишіть слова"
+            android:text="Запам'ятай колір"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button62"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/main_buttons"
-            android:onClick="check_wor_1_1"
-            android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

@@ -123,7 +123,8 @@
                     android:layout_height="114dp"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/volume3"
+                    android:background="@drawable/volume6"
+                    android:onClick="go_volume_6"
                     android:text="Впорядкуй слова"
                     android:textAllCaps="false"
                     android:textSize="16sp" />

@@ -5,6 +5,22 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_wor">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView83"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goHome_wor2_1_1"
+            app:srcCompat="@drawable/home" />
+    </LinearLayout>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +33,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor1"
+                android:id="@+id/wo8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -33,7 +49,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor2"
+                android:id="@+id/wo9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -49,7 +65,39 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/wor3"
+                android:id="@+id/wo10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="32sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/wo11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="32sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/wo12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -60,22 +108,6 @@
         </TableRow>
 
     </TableLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imageView74"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="goHome_worl_1_1"
-            app:srcCompat="@drawable/home" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,7 +141,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
-            android:onClick="check_wor_1_1"
+            android:onClick="check_wor_2_3"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

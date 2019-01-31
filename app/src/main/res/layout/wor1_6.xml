@@ -17,12 +17,13 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/wor8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="5dp"
+                android:textAlignment="center"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -32,12 +33,13 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/wor9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="5dp"
+                android:textAlignment="center"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -47,12 +49,13 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/wor10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="5dp"
+                android:textAlignment="center"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -62,12 +65,13 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/wor11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="5dp"
+                android:textAlignment="center"
                 android:textSize="32sp" />
         </TableRow>
 
@@ -77,13 +81,14 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/wor12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="32sp" />
+                android:textSize="32sp"
+                android:textAlignment="center" />
         </TableRow>
 
     </TableLayout>
@@ -100,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_worl_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -135,6 +141,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
+            android:onClick="check_wor_1_3"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

@@ -13,11 +13,11 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView79"
+            android:id="@+id/imageView84"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goHome_worl_1_1"
+            android:onClick="goHome_wor2_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -41,9 +41,9 @@
 
         <ImageView
             android:id="@+id/wor1_star"
+            app:srcCompat="@drawable/rate1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/rate1" />
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/button34"
