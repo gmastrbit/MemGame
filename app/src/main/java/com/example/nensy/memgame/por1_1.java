@@ -46,10 +46,10 @@ public class por1_1 extends AppCompatActivity {
         if (success > -1 && success < 4){
             ImageView imageView = (ImageView) findViewById(R.id.por10);
             imageView.setImageResource(R.drawable.rate1);
-        } else if (success > 3 && success < 9) {
+        } else if (success > 3 && success < 7) {
             ImageView imageView = (ImageView) findViewById(R.id.por10);
             imageView.setImageResource(R.drawable.rate2);
-        } else if (success == 9) {
+        } else if (success > 6 && success < 10) {
             ImageView imageView = (ImageView) findViewById(R.id.por10);
             imageView.setImageResource(R.drawable.rate3);
         }
@@ -267,8 +267,13 @@ public class por1_1 extends AppCompatActivity {
             ImageView imageView9 = (ImageView) findViewById(R.id.por7);
             imageView9.setImageResource(R.drawable.eight);
 
-            setContentView(R.layout.por1_s);
-            checkResult();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.por1_s);
+                    checkResult();
+                }
+            }, 500);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {

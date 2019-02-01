@@ -36,7 +36,7 @@ public class vih3_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
-        if (success > 0 && success < 2){
+        if (success > -1 && success < 2){
             ImageView imageView = (ImageView) findViewById(R.id.v19);
             imageView.setImageResource(R.drawable.rate1);
         } else if (success == 2) {

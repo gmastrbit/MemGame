@@ -25,30 +25,30 @@ public class RulesActivity extends AppCompatActivity {
     public void go_moz(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_moz.class);
         startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
     public void go_vih(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_vih.class);
         startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
     public void go_por(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_por.class);
         startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
     public void go_col(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_col.class);
         startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
     public void go_wor(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_wor.class);
         startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 }

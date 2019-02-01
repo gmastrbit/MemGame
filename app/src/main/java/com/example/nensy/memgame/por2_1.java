@@ -39,15 +39,15 @@ public class por2_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
-        success = success1 + success2 + success3 - 10;
+        success = success1 + success2 + success3;
 
-        if (success > -10 && success < 4){
+        if (success > -1 && success < 5){
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate1);
-        } else if (success > 3 && success < 9) {
+        } else if (success > 4 && success < 9) {
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate2);
-        } else if (success == 9) {
+        } else if (success > 8 && success < 13) {
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate3);
         }
@@ -318,8 +318,13 @@ public class por2_1 extends AppCompatActivity {
             ImageView imageView12 = (ImageView) findViewById(R.id.po10);
             imageView12.setImageResource(R.drawable.ten);
 
-            setContentView(R.layout.por2_s);
-            checkResult();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    setContentView(R.layout.por2_s);
+                    checkResult();
+                }
+            }, 500);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -329,6 +334,8 @@ public class por2_1 extends AppCompatActivity {
             }, 500);
         }
     }
+
+    // службові кнопки
 
     public void goHome_por_2_1(View view) {
         success = 0;
