@@ -16,47 +16,43 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <EditText
-                android:id="@+id/w1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                <EditText
+                    android:id="@+id/num1"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
 
-            <EditText
-                android:id="@+id/w2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
+                <EditText
+                    android:id="@+id/num2"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                <EditText
+                    android:id="@+id/num3"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/w3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
         </TableRow>
 
     </TableLayout>
@@ -73,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_numl_1_1"
             app:srcCompat="@drawable/home" />
     </LinearLayout>
 
@@ -87,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"
-            android:text="Запишіть слова"
+            android:text="Відтвори цифри"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="24sp"
@@ -108,7 +105,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
-            android:onClick="check_wor_3_1"
+            android:onClick="check_num_1_1"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

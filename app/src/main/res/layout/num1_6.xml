@@ -5,40 +5,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_num">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:text="Запишіть слова"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imageView96"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/home" />
-    </LinearLayout>
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,82 +16,81 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <EditText
-                android:id="@+id/w8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                <EditText
+                    android:id="@+id/num7"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
 
-            <EditText
-                android:id="@+id/w9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
+                <EditText
+                    android:id="@+id/num8"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                <EditText
+                    android:id="@+id/num9"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/w10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/w11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/w12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="center"
-                android:textSize="32sp" />
         </TableRow>
 
     </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goHome_numl_1_1"
+            app:srcCompat="@drawable/home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="Відтвори цифри"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -140,7 +105,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/main_buttons"
-            android:onClick="check_wor_3_3"
+            android:onClick="check_num_1_3"
             android:text="Перевірити" />
     </LinearLayout>
 </RelativeLayout>

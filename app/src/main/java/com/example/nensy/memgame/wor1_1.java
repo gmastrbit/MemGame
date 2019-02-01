@@ -242,5 +242,4 @@ public class wor1_1 extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
-
 }

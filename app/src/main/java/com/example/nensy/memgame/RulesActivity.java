@@ -51,4 +51,10 @@ public class RulesActivity extends AppCompatActivity {
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
+
+    public void go_num(View view){
+        Intent questionIntent = new Intent(RulesActivity.this, rules_num.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
 }

@@ -5,28 +5,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_num">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:text="Запам'ятай слова"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="135dp"
         android:gravity="center">
 
@@ -36,78 +18,31 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="футбол"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                android:text="6"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                android:textSize="36sp" />
 
             <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="волейбол"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                android:text="3"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+                android:textSize="36sp" />
 
             <TextView
-                android:id="@+id/textView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="гол"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                android:text="8"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="рибалка"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="32sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="стадіон"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="32sp" />
+                android:textSize="36sp" />
         </TableRow>
 
     </TableLayout>
@@ -115,15 +50,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageView95"
+            android:id="@+id/imageView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goHome_numl_1_1"
             app:srcCompat="@drawable/home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="Запам'ятай цифри"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 </RelativeLayout>
