@@ -33,7 +33,7 @@
         <activity android:name=".rules_por" />
         <activity android:name=".rules_vih" />
         <activity android:name=".rules_col" />
-        <activity android:name=".rulse_num" />
+        <activity android:name=".rules_num" />
         <activity android:name=".rules_wor" />
         <activity android:name=".col2_1" />
         <activity android:name=".col3_1" />

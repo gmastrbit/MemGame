@@ -12,7 +12,6 @@ public class rules_vih extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rules_vih);
 
-
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // приховує ActionBar:

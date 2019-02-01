@@ -612,10 +612,10 @@ public class moz2_1 extends AppCompatActivity {
         if (success > -1 && success < 4){
             ImageView imageView = (ImageView) findViewById(R.id.imageZirka1);
             imageView.setImageResource(R.drawable.rate1);
-        } else if (success > 3 && success < 9) {
+        } else if (success > 3 && success < 7) {
             ImageView imageView = (ImageView) findViewById(R.id.imageZirka1);
             imageView.setImageResource(R.drawable.rate2);
-        } else if (success == 9) {
+        } else if (success > 6 && success < 10) {
             ImageView imageView = (ImageView) findViewById(R.id.imageZirka1);
             imageView.setImageResource(R.drawable.rate3);
         }

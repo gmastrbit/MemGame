@@ -27,16 +27,16 @@
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Порядок кольорів"
+            android:text="Впорядкуй слова"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="24sp" />
 
         <ImageView
-            android:id="@+id/imageView98"
+            android:id="@+id/imageView100"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            app:srcCompat="@drawable/co1_1" />
+            app:srcCompat="@drawable/wor1_1" />
 
         <TextView
             android:id="@+id/textView16"
@@ -44,16 +44,16 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Погляньте на кружечок та запам'ятайте його колір"
+            android:text="Перегляньте і запам'ятейте всі слова"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/imageView99"
+            android:id="@+id/imageView101"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            app:srcCompat="@drawable/co1_2" />
+            app:srcCompat="@drawable/wor1_2" />
 
         <TextView
             android:id="@+id/textView17"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Виберіть лише той кружечок, який ви запам'ятали"
+            android:text="Введіть всі слова, які запам'ятали, по порядку"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="20sp" />

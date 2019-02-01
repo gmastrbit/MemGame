@@ -36,7 +36,7 @@
             android:id="@+id/imageView18"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            app:srcCompat="@drawable/moz1_2" />
+            app:srcCompat="@drawable/moz1_1" />
 
         <TextView
             android:id="@+id/textView9"
@@ -51,9 +51,9 @@
 
         <ImageView
             android:id="@+id/imageView57"
-            app:srcCompat="@drawable/moz1_1"
             android:layout_width="match_parent"
-            android:layout_height="350dp" />
+            android:layout_height="350dp"
+            app:srcCompat="@drawable/moz1_2" />
 
         <TextView
             android:id="@+id/textView11"
