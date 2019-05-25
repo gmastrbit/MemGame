@@ -45,6 +45,14 @@ public class RatingActivity extends AppCompatActivity {
         String rate11 = sp.getString("rate11", "0");
         String rate12 = sp.getString("rate12", "0");
 
+        String rate13 = sp.getString("rate13", "0");
+        String rate14 = sp.getString("rate14", "0");
+        String rate15 = sp.getString("rate15", "0");
+
+        String rate16 = sp.getString("rate16", "0");
+        String rate17 = sp.getString("rate17", "0");
+        String rate18 = sp.getString("rate18", "0");
+
         int tempRate1 = Integer.parseInt(rate1);
         int tempRate2 = Integer.parseInt(rate2);
         int tempRate3 = Integer.parseInt(rate3);
@@ -61,17 +69,29 @@ public class RatingActivity extends AppCompatActivity {
         int tempRate11 = Integer.parseInt(rate11);
         int tempRate12 = Integer.parseInt(rate12);
 
+        int tempRate13 = Integer.parseInt(rate13);
+        int tempRate14 = Integer.parseInt(rate14);
+        int tempRate15 = Integer.parseInt(rate15);
+
+        int tempRate16 = Integer.parseInt(rate16);
+        int tempRate17 = Integer.parseInt(rate17);
+        int tempRate18 = Integer.parseInt(rate18);
+
         int tempRateGame1 = tempRate1 + tempRate2 + tempRate3;
         int tempRateGame2 = tempRate4 + tempRate5 + tempRate6;
         int tempRateGame3 = tempRate7 + tempRate8 + tempRate9;
         int tempRateGame4 = tempRate10 + tempRate11 + tempRate12;
+        int tempRateGame5 = tempRate13 + tempRate14 + tempRate15;
+        int tempRateGame6 = tempRate16 + tempRate17 + tempRate18;
 
         String game1 = Integer.toString(tempRateGame1);
         String game2 = Integer.toString(tempRateGame2);
         String game3 = Integer.toString(tempRateGame3);
         String game4 = Integer.toString(tempRateGame4);
+        String game5 = Integer.toString(tempRateGame5);
+        String game6 = Integer.toString(tempRateGame6);
 
-        String result = nick + " — " + game1 + " / " + game2 + " / " + game3 + " / " + game4;
+        String result = nick + " — " + game1 + " / " + game2 + " / " + game3 + " / " + game4 + " / " + game5 + " / " + game6;
         TextView textView = (TextView) findViewById(R.id.textView24);
         textView.setText(result);
 
