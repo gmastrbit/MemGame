@@ -37,5 +37,4 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
-
 }

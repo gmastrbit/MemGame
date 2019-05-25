@@ -1,6 +1,8 @@
 package com.example.nensy.memgame;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Handler;
@@ -18,6 +20,8 @@ public class col1_1 extends AppCompatActivity {
     private int attempts1 = 0;
     private int attempts2 = 0;
     private int attempts3 = 0;
+
+    private static final String USER = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +53,29 @@ public class col1_1 extends AppCompatActivity {
         if (success > 0 && success < 3){
             ImageView imageView = (ImageView) findViewById(R.id.col1_star);
             imageView.setImageResource(R.drawable.rate1);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate10", "0");
+            e.commit();
+
         } else if (success > 2 && success < 5) {
             ImageView imageView = (ImageView) findViewById(R.id.col1_star);
             imageView.setImageResource(R.drawable.rate2);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate10", "5");
+            e.commit();
+
         } else if (success > 4 && success < 7) {
             ImageView imageView = (ImageView) findViewById(R.id.col1_star);
             imageView.setImageResource(R.drawable.rate3);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate10", "10");
+            e.commit();
         }
     }
 

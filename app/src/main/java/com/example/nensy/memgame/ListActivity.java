@@ -66,4 +66,12 @@ public class ListActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
+    public void showRating(View view){
+        // перехід на список ігор з анімацією:
+        Intent questionIntent = new Intent(ListActivity.this, RatingActivity.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
+
+
 }

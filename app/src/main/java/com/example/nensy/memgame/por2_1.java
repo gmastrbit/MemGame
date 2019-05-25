@@ -1,6 +1,8 @@
 package com.example.nensy.memgame;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,8 @@ public class por2_1 extends AppCompatActivity {
     private int success1 = 0;
     private int success2 = 0;
     private int success3 = 0;
+
+    private static final String USER = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +48,30 @@ public class por2_1 extends AppCompatActivity {
         if (success > -1 && success < 5){
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate1);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate8", "0");
+            e.commit();
+
         } else if (success > 4 && success < 9) {
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate2);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate8", "5");
+            e.commit();
+
         } else if (success > 8 && success < 13) {
             ImageView imageView = (ImageView) findViewById(R.id.po13);
             imageView.setImageResource(R.drawable.rate3);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate8", "10");
+            e.commit();
+
         }
     }
 

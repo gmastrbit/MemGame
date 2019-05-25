@@ -1,6 +1,8 @@
 package com.example.nensy.memgame;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,8 @@ import android.widget.ImageView;
 public class vih3_1 extends AppCompatActivity {
 
     private int success = 0;
+
+    private static final String USER = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +43,29 @@ public class vih3_1 extends AppCompatActivity {
         if (success > -1 && success < 2){
             ImageView imageView = (ImageView) findViewById(R.id.v19);
             imageView.setImageResource(R.drawable.rate1);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate6", "0");
+            e.commit();
+
         } else if (success == 2) {
             ImageView imageView = (ImageView) findViewById(R.id.v19);
             imageView.setImageResource(R.drawable.rate2);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate6", "5");
+            e.commit();
+
         } else if (success == 3) {
             ImageView imageView = (ImageView) findViewById(R.id.v19);
             imageView.setImageResource(R.drawable.rate3);
+
+            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            SharedPreferences.Editor e = sp.edit();
+            e.putString("rate6", "10");
+            e.commit();
         }
     }
 

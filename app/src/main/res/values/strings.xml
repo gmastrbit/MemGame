@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MemGame</string>
+    <string name="testText"><![CDATA[У лукоморья дуб зелёный;\\n Златая цепь на дубе том:\\n И днём и ночью <b>кот учёный</b>\\n Всё ходит по цепи кругом;\\n Идёт <b>направо</b> - песнь заводит,\\n <b>Налево</b> - сказку говорит.]]></string>
 </resources>

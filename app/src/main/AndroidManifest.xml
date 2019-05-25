@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RulesActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ListActivity" />
         <activity android:name=".moz1_1" />
         <activity android:name=".moz2_1" />
@@ -28,7 +28,7 @@
         <activity android:name=".por2_1" />
         <activity android:name=".por3_1" />
         <activity android:name=".col1_1" />
-        <activity android:name=".Rulse1" />
+        <activity android:name=".RatingActivity" />
         <activity android:name=".rules_moz" />
         <activity android:name=".rules_por" />
         <activity android:name=".rules_vih" />
