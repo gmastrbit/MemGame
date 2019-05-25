@@ -45,33 +45,47 @@ public class wor3_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
-        if (success > 2 && success < 5){
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate1);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+
+        if (success > 2 && success < 5){
+
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "0");
             e.commit();
 
         } else if (success > 4 && success < 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate2);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "5");
             e.commit();
 
         } else if (success > 8 && success < 13) {
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate3);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "10");
             e.commit();
+        }
 
+        String rate16 = sp.getString("rate16", "0");
+        String rate17 = sp.getString("rate17", "0");
+        String rate18 = sp.getString("rate18", "0");
+
+        int tempRate16 = Integer.parseInt(rate16);
+        int tempRate17 = Integer.parseInt(rate17);
+        int tempRate18 = Integer.parseInt(rate18);
+
+        int sum = tempRate16 + tempRate17 + tempRate18;
+
+        if (sum == 0 || sum < 11) {
+            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+            imageView.setImageResource(R.drawable.rate1);
+        } else if (sum > 10 && sum < 21){
+            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+            imageView.setImageResource(R.drawable.rate2);
+        } else if (sum > 19 && sum < 31){
+            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+            imageView.setImageResource(R.drawable.rate3);
         }
     }
 
@@ -93,6 +107,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor1.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor1.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -100,6 +115,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor2.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor2.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -107,6 +123,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor3.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor3.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -146,6 +163,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor4.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor4.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -153,6 +171,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor5.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor5.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -160,6 +179,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor6.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor6.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -167,6 +187,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor7.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor7.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -208,6 +229,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor8.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor8.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -215,6 +237,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor9.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor9.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -222,6 +245,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor10.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor10.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -229,6 +253,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor11.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor11.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -236,6 +261,7 @@ public class wor3_1 extends AppCompatActivity {
             success++;
             wor12.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor12.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -244,6 +270,7 @@ public class wor3_1 extends AppCompatActivity {
             public void run() {
                 setContentView(R.layout.wor3_s);
                 checkResult();
+                success = 0;
             }
         }, 500);
     }
@@ -260,6 +287,7 @@ public class wor3_1 extends AppCompatActivity {
     }
 
     public void go_list_wor3_1(View view) {
+        success = 0;
         Intent questionIntent = new Intent(wor3_1.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);

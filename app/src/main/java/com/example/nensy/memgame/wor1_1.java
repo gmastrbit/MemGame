@@ -45,9 +45,9 @@ public class wor1_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
-        if (success > 2 && success < 5){
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate1);
+        if (success > -20 && success < 5){
+//            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -55,8 +55,8 @@ public class wor1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 4 && success < 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -64,8 +64,8 @@ public class wor1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 8 && success < 13) {
-            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.wor1_star);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -92,6 +92,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor1.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor1.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -99,6 +100,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor2.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor2.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -106,6 +108,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor3.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor3.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -144,6 +147,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor4.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor4.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -151,6 +155,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor5.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor5.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -158,6 +163,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor6.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor6.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -165,6 +171,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor7.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor7.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -205,6 +212,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor8.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor8.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -212,6 +220,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor9.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor9.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -219,6 +228,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor10.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor10.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -226,6 +236,7 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor11.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor11.setTextColor(Color.parseColor("#ff0000"));
         }
 
@@ -233,14 +244,20 @@ public class wor1_1 extends AppCompatActivity {
             success++;
             wor12.setTextColor(Color.parseColor("#00ff00"));
         } else {
+            success--;
             wor12.setTextColor(Color.parseColor("#ff0000"));
         }
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                setContentView(R.layout.wor1_s);
+//                setContentView(R.layout.wor1_s);
                 checkResult();
+
+                success = 0;
+                Intent questionIntent = new Intent(wor1_1.this, wor2_1.class);
+                startActivityForResult(questionIntent, 1);
+                overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
             }
         }, 500);
     }
@@ -258,6 +275,7 @@ public class wor1_1 extends AppCompatActivity {
 
     // перехід до наступної гри
     public void go_wor2_1(View view) {
+        success = 0;
         Intent questionIntent = new Intent(wor1_1.this, wor2_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);

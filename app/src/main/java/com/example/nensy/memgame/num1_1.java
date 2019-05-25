@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 
 public class num1_1 extends AppCompatActivity {
 
@@ -46,8 +45,8 @@ public class num1_1 extends AppCompatActivity {
 
     public void checkResult(){
         if (success > 2 && success < 5){
-            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
-            imageView.setImageResource(R.drawable.rate1);
+//            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -55,8 +54,8 @@ public class num1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 4 && success < 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -64,8 +63,8 @@ public class num1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 8 && success < 13) {
-            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.num1_star);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -212,8 +211,12 @@ public class num1_1 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                setContentView(R.layout.num1_s);
+//                setContentView(R.layout.num1_s);
                 checkResult();
+
+                Intent questionIntent = new Intent(num1_1.this, num2_1.class);
+                startActivityForResult(questionIntent, 1);
+                overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
             }
         }, 500);
     }
