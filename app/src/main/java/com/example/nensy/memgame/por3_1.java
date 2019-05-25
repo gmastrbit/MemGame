@@ -45,32 +45,46 @@ public class por3_1 extends AppCompatActivity {
     public void checkResult(){
         success = success1 + success2 + success3;
 
-        if (success > -1 && success < 5){
-            ImageView imageView = (ImageView) findViewById(R.id.p13);
-            imageView.setImageResource(R.drawable.rate1);
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        if (success > -1 && success < 5){
+
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "0");
             e.commit();
 
         } else if (success > 4 && success < 9) {
-            ImageView imageView = (ImageView) findViewById(R.id.p13);
-            imageView.setImageResource(R.drawable.rate2);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "5");
             e.commit();
 
         } else if (success > 8 && success < 13) {
-            ImageView imageView = (ImageView) findViewById(R.id.p13);
-            imageView.setImageResource(R.drawable.rate3);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "10");
             e.commit();
+        }
+
+        String rate7 = sp.getString("rate7", "0");
+        String rate8 = sp.getString("rate8", "0");
+        String rate9 = sp.getString("rate9", "0");
+
+        int tempRate7 = Integer.parseInt(rate7);
+        int tempRate8 = Integer.parseInt(rate8);
+        int tempRate9 = Integer.parseInt(rate9);
+
+        int sum = tempRate7 + tempRate8 + tempRate9;
+
+        if (sum == 0 || sum < 11) {
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
+            imageView.setImageResource(R.drawable.rate1);
+        } else if (sum > 10 && sum < 21){
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
+            imageView.setImageResource(R.drawable.rate2);
+        } else if (sum > 19 && sum < 31){
+            ImageView imageView = (ImageView) findViewById(R.id.p13);
+            imageView.setImageResource(R.drawable.rate3);
         }
     }
 

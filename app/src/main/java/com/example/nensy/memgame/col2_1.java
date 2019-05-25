@@ -49,8 +49,8 @@ public class col2_1 extends AppCompatActivity {
 
     public void checkResult(){
         if (success > 0 && success < 3){
-            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-            imageView.setImageResource(R.drawable.rate1);
+//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -58,8 +58,8 @@ public class col2_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 2 && success < 5) {
-            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -67,8 +67,8 @@ public class col2_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 4 && success < 7) {
-            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -253,8 +253,12 @@ public class col2_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col2_s);
+//                    setContentView(R.layout.col2_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(col2_1.this, col3_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -276,8 +280,12 @@ public class col2_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col2_s);
+//                    setContentView(R.layout.col2_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(col2_1.this, col3_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -299,8 +307,12 @@ public class col2_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col2_s);
+//                    setContentView(R.layout.col2_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(col2_1.this, col3_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -320,8 +332,12 @@ public class col2_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     // показується layout із завданням
-                    setContentView(R.layout.col2_s);
+//                    setContentView(R.layout.col2_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(col2_1.this, col3_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }

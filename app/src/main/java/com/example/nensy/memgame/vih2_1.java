@@ -41,8 +41,8 @@ public class vih2_1 extends AppCompatActivity {
 
     public void checkResult(){
         if (success > -1 && success < 2){
-            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-            imageView.setImageResource(R.drawable.rate1);
+//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -50,8 +50,8 @@ public class vih2_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success == 2) {
-            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -59,8 +59,8 @@ public class vih2_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success == 3) {
-            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -84,8 +84,12 @@ public class vih2_1 extends AppCompatActivity {
 
     public void go_vih2_s(View view) {
         success++;
-        setContentView(R.layout.vih2_s);
+//        setContentView(R.layout.vih2_s);
         checkResult();
+
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     // не правильно
@@ -111,23 +115,39 @@ public class vih2_1 extends AppCompatActivity {
     }
 
     public void error_vih_2_1_6(View view) {
-        setContentView(R.layout.vih2_s);
+//        setContentView(R.layout.vih2_s);
         checkResult();
+
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void error_vih_2_1_7(View view) {
-        setContentView(R.layout.vih2_s);
+//        setContentView(R.layout.vih2_s);
         checkResult();
+
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void error_vih_2_1_8(View view) {
-        setContentView(R.layout.vih2_s);
+//        setContentView(R.layout.vih2_s);
         checkResult();
+
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void error_vih_2_1_9(View view) {
-        setContentView(R.layout.vih2_s);
+//        setContentView(R.layout.vih2_s);
         checkResult();
+
+        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
+        startActivityForResult(questionIntent, 1);
+        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     // службові кнопки

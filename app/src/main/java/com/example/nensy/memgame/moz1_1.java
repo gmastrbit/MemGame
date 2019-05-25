@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class moz1_1 extends AppCompatActivity {
 
@@ -522,8 +521,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -540,8 +543,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -558,8 +565,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -576,8 +587,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -594,8 +609,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -612,8 +631,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -623,8 +646,8 @@ public class moz1_1 extends AppCompatActivity {
 
     public void checkResult(){
         if (success > -1 && success < 4){
-            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
-            imageView.setImageResource(R.drawable.rate1);
+//            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -632,8 +655,8 @@ public class moz1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 3 && success < 7) {
-            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -641,8 +664,8 @@ public class moz1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 6 && success < 10) {
-            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.imageView9);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -664,8 +687,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -684,8 +711,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -704,8 +735,12 @@ public class moz1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.moz1_s);
+//                    setContentView(R.layout.moz1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(moz1_1.this, moz2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }

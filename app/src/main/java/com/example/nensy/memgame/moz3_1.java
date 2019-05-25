@@ -503,33 +503,48 @@ public class moz3_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
-        if (success > -1 && success < 4){
-            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
-            imageView.setImageResource(R.drawable.rate1);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+
+        if (success > -1 && success < 4){
+
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "0");
             e.commit();
 
         } else if (success > 3 && success < 7) {
-            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
-            imageView.setImageResource(R.drawable.rate2);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "5");
             e.commit();
 
         } else if (success > 6 && success < 10) {
-            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
-            imageView.setImageResource(R.drawable.rate3);
 
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "10");
             e.commit();
 
+        }
+
+        String rate1 = sp.getString("rate1", "0");
+        String rate2 = sp.getString("rate2", "0");
+        String rate3 = sp.getString("rate3", "0");
+
+        int tempRate1 = Integer.parseInt(rate1);
+        int tempRate2 = Integer.parseInt(rate2);
+        int tempRate3 = Integer.parseInt(rate3);
+
+        int sum = tempRate1 + tempRate2 + tempRate3;
+
+        if (sum == 0 || sum < 11) {
+            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
+            imageView.setImageResource(R.drawable.rate1);
+        } else if (sum > 10 && sum < 21){
+            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
+            imageView.setImageResource(R.drawable.rate2);
+        } else if (sum > 19 && sum < 31){
+            ImageView imageView = (ImageView) findViewById(R.id.imageZirka2);
+            imageView.setImageResource(R.drawable.rate3);
         }
     }
 

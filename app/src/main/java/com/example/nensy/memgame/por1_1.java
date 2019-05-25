@@ -48,8 +48,8 @@ public class por1_1 extends AppCompatActivity {
         success = success1 + success2 + success3;
 
         if (success > -1 && success < 4){
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
-            imageView.setImageResource(R.drawable.rate1);
+//            ImageView imageView = (ImageView) findViewById(R.id.por10);
+//            imageView.setImageResource(R.drawable.rate1);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -57,8 +57,8 @@ public class por1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 3 && success < 7) {
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
-            imageView.setImageResource(R.drawable.rate2);
+//            ImageView imageView = (ImageView) findViewById(R.id.por10);
+//            imageView.setImageResource(R.drawable.rate2);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -66,8 +66,8 @@ public class por1_1 extends AppCompatActivity {
             e.commit();
 
         } else if (success > 6 && success < 10) {
-            ImageView imageView = (ImageView) findViewById(R.id.por10);
-            imageView.setImageResource(R.drawable.rate3);
+//            ImageView imageView = (ImageView) findViewById(R.id.por10);
+//            imageView.setImageResource(R.drawable.rate3);
 
             SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
             SharedPreferences.Editor e = sp.edit();
@@ -244,7 +244,12 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+//                    setContentView(R.layout.por1_s);
+                    checkResult();
+
+                    Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -260,7 +265,12 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+//                    setContentView(R.layout.por1_s);
+                    checkResult();
+
+                    Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -276,7 +286,12 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+//                    setContentView(R.layout.por1_s);
+                    checkResult();
+
+                    Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
@@ -292,15 +307,24 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+//                    setContentView(R.layout.por1_s);
                     checkResult();
+
+                    Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    setContentView(R.layout.por1_s);
+//                    setContentView(R.layout.por1_s);
+                    checkResult();
+
+                    Intent questionIntent = new Intent(por1_1.this, por2_1.class);
+                    startActivityForResult(questionIntent, 1);
+                    overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
                 }
             }, 500);
         }
