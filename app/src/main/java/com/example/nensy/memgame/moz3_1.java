@@ -39,7 +39,7 @@ public class moz3_1 extends AppCompatActivity {
             public void run() {
                 setContentView(R.layout.moz3_2);
             }
-        }, 1000);
+        }, 500);
     }
 
     // 1 завдання
@@ -64,9 +64,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -88,9 +88,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -112,9 +112,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -136,9 +136,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -160,9 +160,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -184,9 +184,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -212,9 +212,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -238,9 +238,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -264,9 +264,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_4);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -292,9 +292,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -316,9 +316,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -340,9 +340,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -364,9 +364,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -388,9 +388,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -412,9 +412,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -440,9 +440,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -466,9 +466,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -492,9 +492,9 @@ public class moz3_1 extends AppCompatActivity {
                         public void run() {
                             setContentView(R.layout.moz3_6);
                         }
-                    }, 1000);
+                    }, 500);
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -564,7 +564,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -582,7 +582,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -600,7 +600,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -618,7 +618,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -636,7 +636,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -654,7 +654,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -676,7 +676,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -696,7 +696,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 
@@ -716,7 +716,7 @@ public class moz3_1 extends AppCompatActivity {
                     setContentView(R.layout.moz3_s);
                     checkResult();
                 }
-            }, 500);
+            }, 350);
         }
     }
 

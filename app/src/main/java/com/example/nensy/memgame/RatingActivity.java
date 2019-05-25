@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class RatingActivity extends AppCompatActivity {
 
     private static final String USER = "user";
+    public static final String APP_PREFERENCES = "mysettings";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,8 +93,16 @@ public class RatingActivity extends AppCompatActivity {
         String game6 = Integer.toString(tempRateGame6);
 
         String result = nick + " — " + game1 + " / " + game2 + " / " + game3 + " / " + game4 + " / " + game5 + " / " + game6;
+
         TextView textView = (TextView) findViewById(R.id.textView24);
         textView.setText(result);
+
+        SharedPreferences sp2 = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        String oldData = sp2.getString("oldData", "");
+
+        TextView textView2 = (TextView) findViewById(R.id.textView27);
+        textView2.setText("    " + oldData);
+
 
     }
 
