@@ -18,6 +18,7 @@ public class col2_1 extends AppCompatActivity {
     private int attempts2 = 0;
     private int attempts3 = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -42,39 +43,27 @@ public class col2_1 extends AppCompatActivity {
                 setContentView(R.layout.col2_2);
             }
         }, 1000);
-
     }
 
     // перевірка результату
 
     public void checkResult(){
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > 0 && success < 3){
-//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-//            imageView.setImageResource(R.drawable.rate1);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate11", "0");
             e.commit();
-
         } else if (success > 2 && success < 5) {
-//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-//            imageView.setImageResource(R.drawable.rate2);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate11", "5");
             e.commit();
-
         } else if (success > 4 && success < 7) {
-//            ImageView imageView = (ImageView) findViewById(R.id.col2_star);
-//            imageView.setImageResource(R.drawable.rate3);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate11", "10");
             e.commit();
-
         }
     }
 
@@ -119,7 +108,6 @@ public class col2_1 extends AppCompatActivity {
         attempts1++;
 
         // не вірна відповідь не приховується, щоб полегшити гру
-
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts1 == 1){
             Handler handler = new Handler();
@@ -212,7 +200,6 @@ public class col2_1 extends AppCompatActivity {
         attempts2++;
 
         // не вірна відповідь не приховується, щоб полегшити гру
-
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts2 == 2){
             Handler handler = new Handler();
@@ -252,10 +239,16 @@ public class col2_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    // показується layout із завданням
-//                    setContentView(R.layout.col2_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(col2_1.this, col3_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -279,10 +272,16 @@ public class col2_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    // показується layout із завданням
-//                    setContentView(R.layout.col2_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(col2_1.this, col3_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -306,10 +305,16 @@ public class col2_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    // показується layout із завданням
-//                    setContentView(R.layout.col2_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(col2_1.this, col3_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -325,16 +330,21 @@ public class col2_1 extends AppCompatActivity {
         attempts3++;
 
         // не вірна відповідь не приховується, щоб полегшити гру
-
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts3 == 3){
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    // показується layout із завданням
-//                    setContentView(R.layout.col2_s);
+                    // перевіряємо результати
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(col2_1.this, col3_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -347,21 +357,15 @@ public class col2_1 extends AppCompatActivity {
 
     // перехід на головну activity
     public void goHome_col_2_1(View view) {
+        // очистка лічильників
         success = 0;
         attempts1 = 0;
         attempts2 = 0;
         attempts3 = 0;
 
+        // перехід на головну з анімацією
         Intent questionIntent = new Intent(col2_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
-
-    // перехід до наступної гри
-    public void go_col2_1(View view) {
-       Intent questionIntent = new Intent(col2_1.this, col3_1.class);
-       startActivityForResult(questionIntent, 1);
-       overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-    }
-
 }

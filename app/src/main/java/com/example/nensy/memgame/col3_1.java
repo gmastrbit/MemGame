@@ -18,6 +18,7 @@ public class col3_1 extends AppCompatActivity {
     private int attempts2 = 0;
     private int attempts3 = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -46,36 +47,36 @@ public class col3_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
-
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
-
         if (success > 0 && success < 3){
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate12", "0");
             e.commit();
-
         } else if (success > 2 && success < 5) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate12", "5");
             e.commit();
-
         } else if (success > 4 && success < 7) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate12", "10");
             e.commit();
         }
 
+        // отримування даних про результат трьох ігор
         String rate10 = sp.getString("rate10", "0");
         String rate11 = sp.getString("rate11", "0");
         String rate12 = sp.getString("rate12", "0");
 
+        // переведення результатів в цілочисельний тип
         int tempRate10 = Integer.parseInt(rate10);
         int tempRate11 = Integer.parseInt(rate11);
         int tempRate12 = Integer.parseInt(rate12);
 
+        // сума балів за 3 гри
         int sum = tempRate10 + tempRate11 + tempRate12;
 
         if (sum == 0 || sum < 11) {
@@ -223,7 +224,6 @@ public class col3_1 extends AppCompatActivity {
         attempts2++;
 
         // не вірна відповідь не приховується, щоб полегшити гру
-
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts2 == 2){
             Handler handler = new Handler();
@@ -265,7 +265,15 @@ public class col3_1 extends AppCompatActivity {
                 public void run() {
                     // показується layout із завданням
                     setContentView(R.layout.col3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 500);
         }
@@ -288,7 +296,15 @@ public class col3_1 extends AppCompatActivity {
                 public void run() {
                     // показується layout із завданням
                     setContentView(R.layout.col3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 500);
         }
@@ -311,7 +327,15 @@ public class col3_1 extends AppCompatActivity {
                 public void run() {
                     // показується layout із завданням
                     setContentView(R.layout.col3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 500);
         }
@@ -324,7 +348,6 @@ public class col3_1 extends AppCompatActivity {
         attempts3++;
 
         // не вірна відповідь не приховується, щоб полегшити гру
-
         // якщо було 3 спроби в незалежності від того, правильні вони чи ні, відбувається перехід на наступний layout через пів секунди
         if (attempts3 == 3){
             Handler handler = new Handler();
@@ -332,7 +355,15 @@ public class col3_1 extends AppCompatActivity {
                 public void run() {
                     // показується layout із завданням
                     setContentView(R.layout.col3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 500);
         }
@@ -342,6 +373,7 @@ public class col3_1 extends AppCompatActivity {
 
     // перехід на головну activity
     public void goHome_col_3_1(View view) {
+        // очистка лічильників
         success = 0;
         attempts1 = 0;
         attempts2 = 0;
@@ -351,7 +383,15 @@ public class col3_1 extends AppCompatActivity {
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
+
+    // перехід на список ігор
     public void go_list_col3_1(View view) {
+        // очистка лічильників
+        success = 0;
+        attempts1 = 0;
+        attempts2 = 0;
+        attempts3 = 0;
+
         Intent questionIntent = new Intent(col3_1.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
