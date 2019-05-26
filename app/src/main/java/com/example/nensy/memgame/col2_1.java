@@ -24,7 +24,6 @@ public class col2_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.col2_1);
 
         // вибирається початковий layout
         setContentView(R.layout.col2_1);

@@ -14,17 +14,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class moz3_1 extends AppCompatActivity {
-
+    // змінні для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
     private int attempts1 = 0;
     private int attempts2 = 0;
     private int attempts3 = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.moz3_1);
 
         // приховує статус бар:
@@ -47,8 +50,10 @@ public class moz3_1 extends AppCompatActivity {
     // помилки
 
     public void error3_1_1(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button64);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -71,8 +76,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_1_2(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button65);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -95,8 +102,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_1_3(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button66);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -119,8 +128,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_1_4(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button68);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -143,8 +154,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_1_5(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button69);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -167,8 +180,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_1_6(View view) {
+        // додаємо кількість загальних спроб
         attempts1++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button70);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -193,11 +208,12 @@ public class moz3_1 extends AppCompatActivity {
     // успіх
 
     public void success3_1_1(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button63);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts1++;
         success++;
 
@@ -219,11 +235,12 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void success3_1_2(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button67);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts1++;
         success++;
 
@@ -245,11 +262,12 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void success3_1_3(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button71);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts1++;
         success++;
 
@@ -275,8 +293,10 @@ public class moz3_1 extends AppCompatActivity {
     // помилки
 
     public void error3_2_1(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button72);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -299,8 +319,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_2_2(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button73);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -323,8 +345,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_2_3(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button75);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -347,8 +371,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_2_4(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button77);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -371,8 +397,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_2_5(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button78);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -395,8 +423,10 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void error3_2_6(View view) {
+        // додаємо кількість загальних спроб
         attempts2++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button79);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -421,11 +451,12 @@ public class moz3_1 extends AppCompatActivity {
     // успіх
 
     public void success3_2_1(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button74);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts2++;
         success++;
 
@@ -447,11 +478,12 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void success3_2_2(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button76);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts2++;
         success++;
 
@@ -473,11 +505,12 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void success3_2_3(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button80);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts2++;
         success++;
 
@@ -503,37 +536,36 @@ public class moz3_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
-
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
-
         if (success > -1 && success < 4){
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "0");
             e.commit();
-
         } else if (success > 3 && success < 7) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "5");
             e.commit();
-
         } else if (success > 6 && success < 10) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate3", "10");
             e.commit();
-
         }
 
+        // отримування даних про результат трьох ігор
         String rate1 = sp.getString("rate1", "0");
         String rate2 = sp.getString("rate2", "0");
         String rate3 = sp.getString("rate3", "0");
 
+        // переведення результатів в цілочисельний тип
         int tempRate1 = Integer.parseInt(rate1);
         int tempRate2 = Integer.parseInt(rate2);
         int tempRate3 = Integer.parseInt(rate3);
 
+        // сума балів за 3 гри
         int sum = tempRate1 + tempRate2 + tempRate3;
 
         if (sum == 0 || sum < 11) {
@@ -551,8 +583,10 @@ public class moz3_1 extends AppCompatActivity {
     // помилки
 
     public void error3_3_1(View view) {
+        // додаємо кількість загальних спроб
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button81);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -562,15 +596,25 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void error3_3_2(View view) {
+        // додаємо кількість загальних спроб
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button82);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -580,7 +624,15 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
@@ -589,6 +641,7 @@ public class moz3_1 extends AppCompatActivity {
     public void error3_3_3(View view) {
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button85);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -598,15 +651,25 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void error3_3_4(View view) {
+        // додаємо кількість загальних спроб
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button86);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -616,15 +679,25 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void error3_3_5(View view) {
+        // додаємо кількість загальних спроб
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button87);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -634,15 +707,25 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void error3_3_6(View view) {
+        // додаємо кількість загальних спроб
         attempts3++;
 
+        // кнопка змінює фоновий колір на червоний, тому що відповідь не вірна
         Button button1;
         button1 = (Button)findViewById(R.id.button89);
         button1.setBackgroundColor(Color.parseColor("#bf1818"));
@@ -652,7 +735,15 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
@@ -661,11 +752,12 @@ public class moz3_1 extends AppCompatActivity {
     // успіх
 
     public void success3_3_1(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button83);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts3++;
         success++;
 
@@ -674,18 +766,27 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void success3_3_2(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button84);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts3++;
         success++;
 
@@ -694,18 +795,27 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
     }
 
     public void success3_3_3(View view){
-        // зміна кольору кнопки
+        // зміна кольору кнопки на синій
         Button button1;
         button1 = (Button)findViewById(R.id.button88);
         button1.setBackgroundColor(Color.parseColor("#3F51B5"));
 
+        // додаємо кількість загальних спроб і успішних
         attempts3++;
         success++;
 
@@ -714,7 +824,15 @@ public class moz3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.moz3_s);
+
+                    // перевірка результату
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    attempts1 = 0;
+                    attempts2 = 0;
+                    attempts3 = 0;
                 }
             }, 350);
         }
@@ -723,6 +841,7 @@ public class moz3_1 extends AppCompatActivity {
     // службові кнопки
 
     public void goHome3_1(View view) {
+        // очистка лічильників
         success = 0;
         attempts1 = 0;
         attempts2 = 0;
@@ -734,6 +853,12 @@ public class moz3_1 extends AppCompatActivity {
     }
 
     public void go_list_moz3_1(View view) {
+        // очистка лічильників
+        success = 0;
+        attempts1 = 0;
+        attempts2 = 0;
+        attempts3 = 0;
+
         Intent questionIntent = new Intent(moz3_1.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
