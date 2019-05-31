@@ -10,6 +10,8 @@ public class rules_vih extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.rules_vih);
 
         // приховує статус бар:

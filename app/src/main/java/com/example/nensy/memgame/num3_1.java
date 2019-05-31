@@ -14,9 +14,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class num3_1 extends AppCompatActivity {
-
+    // змінні для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -45,36 +46,36 @@ public class num3_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
-
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
-
         if (success > 2 && success < 5){
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate15", "0");
             e.commit();
-
         } else if (success > 4 && success < 9) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate15", "5");
             e.commit();
-
         } else if (success > 8 && success < 13) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate15", "10");
             e.commit();
         }
 
+        // отримування даних про результат трьох ігор
         String rate13 = sp.getString("rate13", "0");
         String rate14 = sp.getString("rate14", "0");
         String rate15 = sp.getString("rate15", "0");
 
+        // переведення результатів в цілочисельний тип
         int tempRate13 = Integer.parseInt(rate13);
         int tempRate14 = Integer.parseInt(rate14);
         int tempRate15 = Integer.parseInt(rate15);
 
+        // сума балів за 3 гри
         int sum = tempRate13 + tempRate14 + tempRate15;
 
         if (sum == 0 || sum < 11) {
@@ -98,11 +99,12 @@ public class num3_1 extends AppCompatActivity {
         EditText num2 = (EditText) findViewById(R.id.n2);
         EditText num3 = (EditText) findViewById(R.id.n3);
 
+        // отримуємо дані в змінні
         String numb1 = num1.getText().toString();
         String numb2 = num2.getText().toString();
         String numb3 = num3.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb1.equals("2")) {
             success++;
             num1.setTextColor(Color.parseColor("#00ff00"));
@@ -148,11 +150,12 @@ public class num3_1 extends AppCompatActivity {
         EditText num5 = (EditText) findViewById(R.id.n5);
         EditText num6 = (EditText) findViewById(R.id.n6);
 
+        // отримуємо дані в змінні
         String numb4 = num4.getText().toString();
         String numb5 = num5.getText().toString();
         String numb6 = num6.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb4.equals("1")) {
             success++;
             num4.setTextColor(Color.parseColor("#00ff00"));
@@ -198,11 +201,12 @@ public class num3_1 extends AppCompatActivity {
         EditText num8 = (EditText) findViewById(R.id.n8);
         EditText num9 = (EditText) findViewById(R.id.n9);
 
+        // отримуємо дані в змінні
         String numb7 = num7.getText().toString();
         String numb8 = num8.getText().toString();
         String numb9 = num9.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb7.equals("3")) {
             success++;
             num7.setTextColor(Color.parseColor("#00ff00"));
@@ -236,6 +240,7 @@ public class num3_1 extends AppCompatActivity {
     // перехід на головну activity
 
     public void goHome_num3_1_1(View view) {
+        // очистка лічильників
         success = 0;
 
         Intent questionIntent = new Intent(num3_1.this, MainActivity.class);

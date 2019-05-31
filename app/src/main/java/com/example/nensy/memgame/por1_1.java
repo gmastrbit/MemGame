@@ -19,6 +19,7 @@ public class por1_1 extends AppCompatActivity {
     private int success2 = 0;
     private int success3 = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -45,35 +46,26 @@ public class por1_1 extends AppCompatActivity {
 
     // метод для перевірки результату в залежності від успішних спроб для 1, 2 і 3 гри
     public void checkResult(){
+        // результат за спроби
         success = success1 + success2 + success3;
 
+        // отримання доступу до сховища даних
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > -1 && success < 4){
-//            ImageView imageView = (ImageView) findViewById(R.id.por10);
-//            imageView.setImageResource(R.drawable.rate1);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate7", "0");
             e.commit();
-
         } else if (success > 3 && success < 7) {
-//            ImageView imageView = (ImageView) findViewById(R.id.por10);
-//            imageView.setImageResource(R.drawable.rate2);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate7", "5");
             e.commit();
-
         } else if (success > 6 && success < 10) {
-//            ImageView imageView = (ImageView) findViewById(R.id.por10);
-//            imageView.setImageResource(R.drawable.rate3);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate7", "10");
             e.commit();
-
         }
     }
 
@@ -114,6 +106,7 @@ public class por1_1 extends AppCompatActivity {
         if (success1 == 1) {
             success1++;
 
+            // заміна зображення на картинці
             ImageView imageView2 = (ImageView) findViewById(R.id.por1);
             imageView2.setImageResource(R.drawable.seven);
 
@@ -153,6 +146,7 @@ public class por1_1 extends AppCompatActivity {
         if (success2 == 0) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView3 = (ImageView) findViewById(R.id.por4);
             imageView3.setImageResource(R.drawable.four);
         } else {
@@ -176,6 +170,7 @@ public class por1_1 extends AppCompatActivity {
         if (success2 == 1) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView4 = (ImageView) findViewById(R.id.por5);
             imageView4.setImageResource(R.drawable.six);
         } else {
@@ -199,6 +194,7 @@ public class por1_1 extends AppCompatActivity {
         if (success2 == 2) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView5 = (ImageView) findViewById(R.id.por3);
             imageView5.setImageResource(R.drawable.nine);
 
@@ -238,15 +234,23 @@ public class por1_1 extends AppCompatActivity {
         if (success3 == 0) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView6 = (ImageView) findViewById(R.id.por6);
             imageView6.setImageResource(R.drawable.one);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-//                    setContentView(R.layout.por1_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(por1_1.this, por2_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -259,15 +263,23 @@ public class por1_1 extends AppCompatActivity {
         if (success3 == 1) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView7 = (ImageView) findViewById(R.id.por8);
             imageView7.setImageResource(R.drawable.two);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-//                    setContentView(R.layout.por1_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(por1_1.this, por2_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -280,15 +292,23 @@ public class por1_1 extends AppCompatActivity {
         if (success3 == 2) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView8 = (ImageView) findViewById(R.id.por9);
             imageView8.setImageResource(R.drawable.three);
         } else {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-//                    setContentView(R.layout.por1_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(por1_1.this, por2_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -301,15 +321,23 @@ public class por1_1 extends AppCompatActivity {
         if (success3 == 3) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView9 = (ImageView) findViewById(R.id.por7);
             imageView9.setImageResource(R.drawable.eight);
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-//                    setContentView(R.layout.por1_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(por1_1.this, por2_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -319,9 +347,16 @@ public class por1_1 extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-//                    setContentView(R.layout.por1_s);
+                    // перевіряємо результат
                     checkResult();
 
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
+
+                    // після перевірки результату переходимо відразу на наступну гру
                     Intent questionIntent = new Intent(por1_1.this, por2_1.class);
                     startActivityForResult(questionIntent, 1);
                     overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -334,6 +369,7 @@ public class por1_1 extends AppCompatActivity {
 
     // перехід на головну activity
     public void goHome_por_1_1(View view) {
+        // очистка лічильників
         success = 0;
         success1 = 0;
         success2 = 0;
@@ -343,12 +379,4 @@ public class por1_1 extends AppCompatActivity {
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
-
-    // перехід до наступної гри
-    public void go_por2_1(View view) {
-        Intent questionIntent = new Intent(por1_1.this, por2_1.class);
-        startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-    }
-
 }

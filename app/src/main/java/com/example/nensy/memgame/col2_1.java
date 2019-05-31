@@ -47,6 +47,7 @@ public class col2_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > 0 && success < 3){
             // записування результату гри

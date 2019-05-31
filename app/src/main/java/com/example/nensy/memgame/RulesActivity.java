@@ -22,36 +22,42 @@ public class RulesActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
+    // перехід на правила 1 гри
     public void go_moz(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_moz.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
+    // перехід на правила 2 гри
     public void go_vih(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_vih.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
+    // перехід на правила 3 гри
     public void go_por(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_por.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
+    // перехід на правила 4 гри
     public void go_col(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_col.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
+    // перехід на правила 5 гри
     public void go_wor(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_wor.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
+    // перехід на правила 6 гри
     public void go_num(View view){
         Intent questionIntent = new Intent(RulesActivity.this, rules_num.class);
         startActivityForResult(questionIntent, 1);

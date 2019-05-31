@@ -10,9 +10,9 @@ public class rules_por extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rules_por);
-        // вибирається початковий layout
 
+        // вибирається початковий layout
+        setContentView(R.layout.rules_por);
 
         // приховує статус бар:
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

@@ -13,9 +13,10 @@ import android.view.WindowManager;
 import android.widget.EditText;
 
 public class num2_1 extends AppCompatActivity {
-
+    // змінні для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -44,33 +45,23 @@ public class num2_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
+        // отримання доступу до сховища даних
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > 2 && success < 5){
-//            ImageView imageView = (ImageView) findViewById(R.id.num2_star);
-//            imageView.setImageResource(R.drawable.rate1);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate14", "0");
             e.commit();
-
         } else if (success > 4 && success < 9) {
-//            ImageView imageView = (ImageView) findViewById(R.id.num2_star);
-//            imageView.setImageResource(R.drawable.rate2);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate14", "5");
             e.commit();
-
         } else if (success > 8 && success < 13) {
-//            ImageView imageView = (ImageView) findViewById(R.id.num2_star);
-//            imageView.setImageResource(R.drawable.rate3);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate14", "10");
             e.commit();
-
         }
     }
 
@@ -83,11 +74,12 @@ public class num2_1 extends AppCompatActivity {
         EditText num2 = (EditText) findViewById(R.id.nu2);
         EditText num3 = (EditText) findViewById(R.id.nu3);
 
+        // отримуємо дані в змінні
         String numb1 = num1.getText().toString();
         String numb2 = num2.getText().toString();
         String numb3 = num3.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb1.equals("9")) {
             success++;
             num1.setTextColor(Color.parseColor("#00ff00"));
@@ -133,11 +125,12 @@ public class num2_1 extends AppCompatActivity {
         EditText num5 = (EditText) findViewById(R.id.nu5);
         EditText num6 = (EditText) findViewById(R.id.nu6);
 
+        // отримуємо дані в змінні
         String numb4 = num4.getText().toString();
         String numb5 = num5.getText().toString();
         String numb6 = num6.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb4.equals("6")) {
             success++;
             num4.setTextColor(Color.parseColor("#00ff00"));
@@ -183,11 +176,12 @@ public class num2_1 extends AppCompatActivity {
         EditText num8 = (EditText) findViewById(R.id.nu8);
         EditText num9 = (EditText) findViewById(R.id.nu9);
 
+        // отримуємо дані в змінні
         String numb7 = num7.getText().toString();
         String numb8 = num8.getText().toString();
         String numb9 = num9.getText().toString();
 
-        // перевірка на вірність слів
+        // перевірка на вірність цифр
         if (numb7.equals("7")) {
             success++;
             num7.setTextColor(Color.parseColor("#00ff00"));
@@ -212,8 +206,11 @@ public class num2_1 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-//                setContentView(R.layout.num2_s);
+                // перевіряємо результат
                 checkResult();
+
+                // очистка лічильників
+                success = 0;
 
                 Intent questionIntent = new Intent(num2_1.this, num3_1.class);
                 startActivityForResult(questionIntent, 1);
@@ -227,17 +224,11 @@ public class num2_1 extends AppCompatActivity {
     // перехід на головну activity
 
     public void goHome_num2_1_1(View view) {
+        // очистка лічильників
         success = 0;
 
         Intent questionIntent = new Intent(num2_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-    }
-
-    // перехід до наступної гри
-    public void go_num3_1(View view) {
-         Intent questionIntent = new Intent(num2_1.this, num3_1.class);
-         startActivityForResult(questionIntent, 1);
-         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 }

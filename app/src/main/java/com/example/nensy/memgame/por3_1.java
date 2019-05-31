@@ -12,12 +12,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class por3_1 extends AppCompatActivity {
-
+    // змінні для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
     private int success1 = 0;
     private int success2 = 0;
     private int success3 = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -43,37 +44,39 @@ public class por3_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
+        // сума всіх успішних відповідей
         success = success1 + success2 + success3;
 
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
-
         if (success > -1 && success < 5){
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "0");
             e.commit();
-
         } else if (success > 4 && success < 9) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "5");
             e.commit();
-
         } else if (success > 8 && success < 13) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate9", "10");
             e.commit();
         }
 
+        // отримування даних про результат трьох ігор
         String rate7 = sp.getString("rate7", "0");
         String rate8 = sp.getString("rate8", "0");
         String rate9 = sp.getString("rate9", "0");
 
+        // переведення результатів в цілочисельний тип
         int tempRate7 = Integer.parseInt(rate7);
         int tempRate8 = Integer.parseInt(rate8);
         int tempRate9 = Integer.parseInt(rate9);
 
+        // сума всіх успішних відповідей
         int sum = tempRate7 + tempRate8 + tempRate9;
 
         if (sum == 0 || sum < 11) {
@@ -92,6 +95,7 @@ public class por3_1 extends AppCompatActivity {
         if (success1 == 0) {
             success1++;
 
+            // заміна зображення на картинці
             ImageView imageView1 = (ImageView) findViewById(R.id.p1);
             imageView1.setImageResource(R.drawable.two);
         } else {
@@ -115,6 +119,7 @@ public class por3_1 extends AppCompatActivity {
         if (success1 == 1) {
             success1++;
 
+            // заміна зображення на картинці
             ImageView imageView2 = (ImageView) findViewById(R.id.p2);
             imageView2.setImageResource(R.drawable.five);
         } else {
@@ -138,6 +143,7 @@ public class por3_1 extends AppCompatActivity {
         if (success1 == 2) {
             success1++;
 
+            // заміна зображення на картинці
             ImageView imageView3 = (ImageView) findViewById(R.id.p3);
             imageView3.setImageResource(R.drawable.nine);
 
@@ -177,6 +183,7 @@ public class por3_1 extends AppCompatActivity {
         if (success2 == 0) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView4 = (ImageView) findViewById(R.id.p4);
             imageView4.setImageResource(R.drawable.one);
         } else {
@@ -196,11 +203,11 @@ public class por3_1 extends AppCompatActivity {
         }
     }
 
-
     public void por3_2_2(View view) {
         if (success2 == 1) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView5 = (ImageView) findViewById(R.id.p5);
             imageView5.setImageResource(R.drawable.three);
         } else {
@@ -224,6 +231,7 @@ public class por3_1 extends AppCompatActivity {
         if (success2 == 2) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView6 = (ImageView) findViewById(R.id.p6);
             imageView6.setImageResource(R.drawable.four);
         } else {
@@ -247,6 +255,7 @@ public class por3_1 extends AppCompatActivity {
         if (success2 == 3) {
             success2++;
 
+            // заміна зображення на картинці
             ImageView imageView7 = (ImageView) findViewById(R.id.p7);
             imageView7.setImageResource(R.drawable.eight);
 
@@ -286,6 +295,7 @@ public class por3_1 extends AppCompatActivity {
         if (success3 == 0) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView8 = (ImageView) findViewById(R.id.p8);
             imageView8.setImageResource(R.drawable.one);
         } else {
@@ -293,6 +303,15 @@ public class por3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.por3_s);
+
+                    // перевіряємо результат
+                    checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
                 }
             }, 500);
         }
@@ -302,6 +321,7 @@ public class por3_1 extends AppCompatActivity {
         if (success3 == 1) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView9 = (ImageView) findViewById(R.id.p9);
             imageView9.setImageResource(R.drawable.six);
         } else {
@@ -309,6 +329,15 @@ public class por3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.por3_s);
+
+                    // перевіряємо результат
+                    checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
                 }
             }, 500);
         }
@@ -318,6 +347,7 @@ public class por3_1 extends AppCompatActivity {
         if (success3 == 2) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView10 = (ImageView) findViewById(R.id.p10);
             imageView10.setImageResource(R.drawable.seven);
         } else {
@@ -334,6 +364,7 @@ public class por3_1 extends AppCompatActivity {
         if (success3 == 3) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView11 = (ImageView) findViewById(R.id.p11);
             imageView11.setImageResource(R.drawable.eight);
         } else {
@@ -341,6 +372,15 @@ public class por3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.por3_s);
+
+                    // перевіряємо результат
+                    checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
                 }
             }, 500);
         }
@@ -350,6 +390,7 @@ public class por3_1 extends AppCompatActivity {
         if (success3 == 4) {
             success3++;
 
+            // заміна зображення на картинці
             ImageView imageView12 = (ImageView) findViewById(R.id.p12);
             imageView12.setImageResource(R.drawable.ten);
 
@@ -357,7 +398,15 @@ public class por3_1 extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     setContentView(R.layout.por3_s);
+
+                    // перевіряємо результат
                     checkResult();
+
+                    // очистка лічильників
+                    success = 0;
+                    success1 = 0;
+                    success2 = 0;
+                    success3 = 0;
                 }
             }, 500);
         } else {
@@ -373,6 +422,7 @@ public class por3_1 extends AppCompatActivity {
     // службові кнопки
 
     public void goHome_por_3_1(View view) {
+        // очистка лічильників
         success = 0;
         success1 = 0;
         success2 = 0;

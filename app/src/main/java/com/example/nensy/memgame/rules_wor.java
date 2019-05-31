@@ -10,6 +10,8 @@ public class rules_wor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.rules_wor);
 
         // приховує статус бар:
