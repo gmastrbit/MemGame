@@ -139,6 +139,7 @@ public class UserActivity extends AppCompatActivity {
         SharedPreferences sp3 = getSharedPreferences(USER, Context.MODE_PRIVATE);
         SharedPreferences.Editor e1 = sp3.edit();
 
+        // встановлення значення для попереднього рейтингу ігор на 0
         e1.putString("rate1", "0");
         e1.putString("rate2", "0");
         e1.putString("rate3", "0");
@@ -172,10 +173,12 @@ public class UserActivity extends AppCompatActivity {
 
         // перевірка введених даних
         if (userName.isEmpty()){
+            // виведення повідомлення про результат
             Toast toast = Toast.makeText(UserActivity.this, "Введіть свій нік! ", Toast.LENGTH_SHORT);
             toast.show();
         } else {
             if (userName.length() >= 15 ){
+                // виведення повідомлення про результат
                 Toast toast = Toast.makeText(UserActivity.this, "Введіть коротший нік", Toast.LENGTH_SHORT);
                 toast.show();
             } else {

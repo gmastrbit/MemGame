@@ -14,9 +14,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class wor3_1 extends AppCompatActivity {
-
+    // змінна для відслідковування успішних спроб і спроб взагалі
     private int success = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -45,36 +46,36 @@ public class wor3_1 extends AppCompatActivity {
     // перевірка результату
 
     public void checkResult(){
-
+        // отримання доступу до сховища даних
         SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
-
         if (success > 2 && success < 5){
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "0");
             e.commit();
-
         } else if (success > 4 && success < 9) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "5");
             e.commit();
-
         } else if (success > 8 && success < 13) {
-
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate18", "10");
             e.commit();
         }
 
+        // отримування даних про результат трьох ігор
         String rate16 = sp.getString("rate16", "0");
         String rate17 = sp.getString("rate17", "0");
         String rate18 = sp.getString("rate18", "0");
 
+        // переведення результатів в цілочисельний тип
         int tempRate16 = Integer.parseInt(rate16);
         int tempRate17 = Integer.parseInt(rate17);
         int tempRate18 = Integer.parseInt(rate18);
 
+        // сума всіх успішних відповідей
         int sum = tempRate16 + tempRate17 + tempRate18;
 
         if (sum == 0 || sum < 11) {
@@ -98,6 +99,7 @@ public class wor3_1 extends AppCompatActivity {
         EditText wor2 = (EditText) findViewById(R.id.w2);
         EditText wor3 = (EditText) findViewById(R.id.w3);
 
+        // отримуємо дані в змінні
         String word1 = wor1.getText().toString();
         String word2 = wor2.getText().toString();
         String word3 = wor3.getText().toString();
@@ -153,6 +155,7 @@ public class wor3_1 extends AppCompatActivity {
         EditText wor6 = (EditText) findViewById(R.id.w6);
         EditText wor7 = (EditText) findViewById(R.id.w7);
 
+        // отримуємо дані в змінні
         String word4 = wor4.getText().toString();
         String word5 = wor5.getText().toString();
         String word6 = wor6.getText().toString();
@@ -218,6 +221,7 @@ public class wor3_1 extends AppCompatActivity {
         EditText wor11 = (EditText) findViewById(R.id.w11);
         EditText wor12 = (EditText) findViewById(R.id.w12);
 
+        // отримуємо дані в змінні
         String word8 = wor8.getText().toString();
         String word9 = wor9.getText().toString();
         String word10 = wor10.getText().toString();
@@ -269,7 +273,11 @@ public class wor3_1 extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 setContentView(R.layout.wor3_s);
+
+                // перевіряємо результат
                 checkResult();
+
+                // очистка лічильників
                 success = 0;
             }
         }, 500);
@@ -279,18 +287,20 @@ public class wor3_1 extends AppCompatActivity {
 
     // перехід на головну activity
     public void goHome_wor3_1_1(View view) {
+        // очистка лічильників
         success = 0;
 
+        // перехід на головну з анімацією
         Intent questionIntent = new Intent(wor3_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
 
     public void go_list_wor3_1(View view) {
+        // очистка лічильників
         success = 0;
         Intent questionIntent = new Intent(wor3_1.this, ListActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
     }
-
 }

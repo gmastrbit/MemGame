@@ -379,6 +379,7 @@ public class col3_1 extends AppCompatActivity {
         attempts2 = 0;
         attempts3 = 0;
 
+        // перехід на головну з анімацією
         Intent questionIntent = new Intent(col3_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);

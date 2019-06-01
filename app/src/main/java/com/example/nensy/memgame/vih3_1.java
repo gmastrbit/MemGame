@@ -219,6 +219,7 @@ public class vih3_1 extends AppCompatActivity {
         // очистка лічильників
         success = 0;
 
+        // перехід на головну з анімацією
         Intent questionIntent = new Intent(vih3_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);

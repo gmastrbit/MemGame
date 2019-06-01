@@ -167,6 +167,7 @@ public class vih2_1 extends AppCompatActivity {
         // очистка лічильників
         success = 0;
 
+
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
@@ -178,6 +179,7 @@ public class vih2_1 extends AppCompatActivity {
         // очистка лічильників
         success = 0;
 
+        // перехід на головну з анімацією
         Intent questionIntent = new Intent(vih2_1.this, MainActivity.class);
         startActivityForResult(questionIntent, 1);
         overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
