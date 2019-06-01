@@ -16,6 +16,7 @@ public class vih1_1 extends AppCompatActivity {
     // змінна для підрахунку успішних спроб
     private int success = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
@@ -44,33 +45,23 @@ public class vih1_1 extends AppCompatActivity {
     // метод для перевірки результату
 
     public void checkResult(){
+        // отримання доступу до сховища даних
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > -1 && success < 2){
-//            ImageView imageView = (ImageView) findViewById(R.id.vih11);
-//            imageView.setImageResource(R.drawable.rate1);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate4", "0");
             e.commit();
-
         } else if (success == 2) {
-//            ImageView imageView = (ImageView) findViewById(R.id.vih11);
-//            imageView.setImageResource(R.drawable.rate2);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate4", "5");
             e.commit();
-
         } else if (success == 3) {
-//            ImageView imageView = (ImageView) findViewById(R.id.vih11);
-//            imageView.setImageResource(R.drawable.rate3);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate4", "10");
             e.commit();
-
         }
     }
 
@@ -79,19 +70,27 @@ public class vih1_1 extends AppCompatActivity {
     public void go_vih1_3(View view) {
         // при правильній відповіді, змінна успіху збільшується
         success++;
+
         // відразу змінюється layout
         setContentView(R.layout.vih1_3);
     }
 
     public void go_vih1_4(View view) {
+        // при правильній відповіді, змінна успіху збільшується
         success++;
+
+        // відразу змінюється layout
         setContentView(R.layout.vih1_4);
     }
 
     public void go_vih1_s(View view) {
         success++;
-//        setContentView(R.layout.vih1_s);
+
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
         startActivityForResult(questionIntent, 1);
@@ -106,17 +105,22 @@ public class vih1_1 extends AppCompatActivity {
     }
 
     public void error2_1(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih1_4);
     }
 
     public void error2_2(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih1_4);
     }
 
     public void error3_1(View view) {
-//        setContentView(R.layout.vih1_s);
+        // перевіряємо результат
         // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
         startActivityForResult(questionIntent, 1);
@@ -124,9 +128,12 @@ public class vih1_1 extends AppCompatActivity {
     }
 
     public void error3_2(View view) {
-//        setContentView(R.layout.vih1_s);
+        // перевіряємо результат
         // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
         startActivityForResult(questionIntent, 1);
@@ -134,9 +141,12 @@ public class vih1_1 extends AppCompatActivity {
     }
 
     public void error3_3(View view) {
-//        setContentView(R.layout.vih1_s);
+        // перевіряємо результат
         // в останній грі змінюється layout і відбувається перевірка результату
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
         startActivityForResult(questionIntent, 1);
@@ -145,15 +155,9 @@ public class vih1_1 extends AppCompatActivity {
 
     // службові кнопки
 
-    // перехід до наступної гри
-    public void go_list_vih2_1(View view) {
-        Intent questionIntent = new Intent(vih1_1.this, vih2_1.class);
-        startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-    }
-
     // перехід на головну activity
     public void goHome_vih1_1(View view) {
+        // очистка лічильників
         success = 0;
 
         Intent questionIntent = new Intent(vih1_1.this, MainActivity.class);

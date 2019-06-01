@@ -13,13 +13,17 @@ import android.widget.ImageView;
 
 public class vih2_1 extends AppCompatActivity {
 
+    // змінна для підрахунку успішних спроб
     private int success = 0;
 
+    // змінна для визначення назви файлу, де будуть зберігатися дані
     private static final String USER = "user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // вибирається початковий layout
         setContentView(R.layout.vih2_1);
 
         // приховує статус бар:
@@ -40,52 +44,53 @@ public class vih2_1 extends AppCompatActivity {
     // результат
 
     public void checkResult(){
+        // отримання доступу до сховища даних
+        SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
         if (success > -1 && success < 2){
-//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-//            imageView.setImageResource(R.drawable.rate1);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate5", "0");
             e.commit();
-
         } else if (success == 2) {
-//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-//            imageView.setImageResource(R.drawable.rate2);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate5", "5");
             e.commit();
-
         } else if (success == 3) {
-//            ImageView imageView = (ImageView) findViewById(R.id.vi15);
-//            imageView.setImageResource(R.drawable.rate3);
-
-            SharedPreferences sp = getSharedPreferences(USER, Context.MODE_PRIVATE);
+            // записування результату гри
             SharedPreferences.Editor e = sp.edit();
             e.putString("rate5", "10");
             e.commit();
-
         }
     }
 
     // правильно
 
     public void go_vih2_3(View view) {
+        // при правильній відповіді, змінна успіху збільшується
         success++;
+
+        // відразу змінюється layout
         setContentView(R.layout.vih2_3);
     }
 
     public void go_vih2_4(View view) {
+        // при правильній відповіді, змінна успіху збільшується
         success++;
+
+        // відразу змінюється layout
         setContentView(R.layout.vih2_4);
     }
 
     public void go_vih2_s(View view) {
+        // при правильній відповіді, змінна успіху збільшується
         success++;
-//        setContentView(R.layout.vih2_s);
+
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
@@ -95,28 +100,36 @@ public class vih2_1 extends AppCompatActivity {
     // не правильно
 
     public void error_vih_2_1_1(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih2_3);
     }
 
     public void error_vih_2_1_2(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih2_3);
     }
 
     public void error_vih_2_1_3(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih2_4);
     }
 
     public void error_vih_2_1_4(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih2_4);
     }
 
     public void error_vih_2_1_5(View view) {
+        // при не вірній відповіді просто замінюється layout
         setContentView(R.layout.vih2_4);
     }
 
     public void error_vih_2_1_6(View view) {
-//        setContentView(R.layout.vih2_s);
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
@@ -124,8 +137,11 @@ public class vih2_1 extends AppCompatActivity {
     }
 
     public void error_vih_2_1_7(View view) {
-//        setContentView(R.layout.vih2_s);
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
@@ -133,8 +149,11 @@ public class vih2_1 extends AppCompatActivity {
     }
 
     public void error_vih_2_1_8(View view) {
-//        setContentView(R.layout.vih2_s);
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
@@ -142,8 +161,11 @@ public class vih2_1 extends AppCompatActivity {
     }
 
     public void error_vih_2_1_9(View view) {
-//        setContentView(R.layout.vih2_s);
+        // перевіряємо результат
         checkResult();
+
+        // очистка лічильників
+        success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
         startActivityForResult(questionIntent, 1);
@@ -152,13 +174,8 @@ public class vih2_1 extends AppCompatActivity {
 
     // службові кнопки
 
-    public void go_list_vih3_1(View view) {
-        Intent questionIntent = new Intent(vih2_1.this, vih3_1.class);
-        startActivityForResult(questionIntent, 1);
-        overridePendingTransition(R.anim.bottom_in, R.anim.top_out);
-    }
-
     public void goHome_vih2_1(View view) {
+        // очистка лічильників
         success = 0;
 
         Intent questionIntent = new Intent(vih2_1.this, MainActivity.class);
